@@ -4,8 +4,6 @@
 ##############短期活动##############
 # 年货节(活动时间：2021年1月9日-2021年2月9日)
 10 8 * * * node /scripts/jd_nh.js >> /scripts/logs/jd_nh.log 2>&1
-# 京东炸年兽集爆竹(活动时间:2021-1-18至2021-2-11)怕有遗漏故多运行几次
-0 * * * * node /scripts/jd_nian.js >> /scripts/logs/jd_nian.log 2>&1
 # 京东神仙书院(活动时间:2021-1-20至2021-2-5)
 30 6,8,12,22 * * * node /scripts/jd_immortal.js >> /scripts/logs/jd_immortal.log 2>&1
 # 京东神仙书院答题(活动时间:2021-1-20至2021-2-5)
@@ -89,7 +87,7 @@
 # 微信小程序京东赚赚
 10 11 * * * node /scripts/jd_jdzz.js >> /scripts/logs/jd_jdzz.log 2>&1
 # 宠汪汪邀请助力
-10 10,11 * * * node /scripts/jd_joy_run.js >> /scripts/logs/jd_joy_run.log 2>&1
+10 9-20/2 * * * node /scripts/jd_joy_run.js >> /scripts/logs/jd_joy_run.log 2>&1
 # 注销京东已开的店铺会员，不是注销京东plus会员，个别店铺无法注销
 44 4 * * 6 node /scripts/jd_unbind.js >> /scripts/logs/jd_unbind.log 2>&1
 # crazyJoy自动每日任务
@@ -114,3 +112,5 @@
 10 7 * * * node /scripts/jd_ms.js >> /scripts/logs/jd_ms.log 2>&1
 # 京东超级盒子
 20 7 * * * node /scripts/jd_super_box.js >> /scripts/logs/jd_super_box.log 2>&1
+# 删除优惠券(默认注释，如需要自己开启，如有误删，已删除的券可以在回收站中还原，慎用)
+#20 9 * * 6 node /scripts/jd_delCoupon.js >> /scripts/logs/jd_delCoupon.log 2>&1
