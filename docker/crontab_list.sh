@@ -244,7 +244,7 @@
 # 跳跳乐瓜分京豆
 15 0,12,22 * * * node /scripts/jd_jump.js >> /scripts/logs/jd_jump.log 2>&1
 #京喜牧场
-11 0-23/3 * * * node /scripts/jd_jxmc.js >> /scripts/logs/jd_jxmc.log 2>&1
+#11 0-23/3 * * * node /scripts/jd_jxmc.js >> /scripts/logs/jd_jxmc.log 2>&1
 
 #欧洲狂欢杯
 #15 0,12,22 * * * node /scripts/jd_europeancup.js >> /scripts/logs/jd_europeancup.log 2>&1
