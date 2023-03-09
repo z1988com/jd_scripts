@@ -379,7 +379,7 @@ async function startItem(activeId, activeType) {
               if (data.data.taskInfo.isTaskLimit === 0) {
                 let {videoBrowsing, taskCompletionProgress, taskCompletionLimit} = data.data.taskInfo
                 if (activeType !== 3)
-                  videoBrowsing = activeType === 1 ? 5 : 30
+                  videoBrowsing = activeType === 1 ? 10 : 20
                 console.log(`【${taskCompletionProgress + 1}/${taskCompletionLimit}】浏览商品任务记录成功，等待${videoBrowsing}秒`)
                 await $.wait(videoBrowsing * 1000)
                 await endItem(data.data.uuid, activeType, activeId, activeType === 3 ? videoBrowsing : "")
