@@ -39,6 +39,9 @@ if ($.isNode()) {
             }
             $.UUID = getUUID('xxxxxxxxxxxxxxxx');
             await main()
+			
+			console.log(`休息一分钟`);
+			await $.wait(1*60*1000) 
         }
     }
 })().catch((e) => { $.log('', `❌ ${$.name}, 失败! 原因: ${e}!`, '') }).finally(() => { $.done(); })
@@ -51,7 +54,7 @@ async function main() {
         for (let i = 0; i < $.tasklist.length; i++) {
             console.log(`去领取${$.tasklist[i].taskDesc}任务`)
             await taskrecord($.tasklist[i].id)
-            await $.wait(3000);
+            await $.wait(5000);
             console.log(`去领取积分`)
             await taskreceive($.tasklist[i].id)
         }
