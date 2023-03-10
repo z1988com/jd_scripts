@@ -640,6 +640,9 @@
 #东东爱消除
 30 11 * * *  node /scripts/jd_moxigame.js >> /scripts/logs/jd_moxigame.log 2>&1
 
+
+#东东爱消除
+19 10 * * *  node /scripts/jd_jrsign.js >> /scripts/logs/jd_jrsign.log 2>&1
 ##############值得买##############
 
 #10 0 * * * * node /scripts/smzdm_mission.js >> /scripts/logs/smzdm_mission.log 2>&1
