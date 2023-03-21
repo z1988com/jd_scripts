@@ -207,7 +207,8 @@
 
 # 签到领现金
 #53 */4 * * * node /scripts/jd_cash.js >> /scripts/logs/jd_cash.log 2>&1
-48 */4 * * * node /scripts/jd_cash_panda.js >> /scripts/logs/jd_cash_panda.log 2>&1
+#48 */4 * * * node /scripts/jd_cash_panda.js >> /scripts/logs/jd_cash_panda.log 2>&1
+48 */4 * * * node /scripts/jd_cashsign.js >> /scripts/logs/jd_cashsign.log 2>&1
 
 # 闪购盲盒
 #47 8,22 * * * node /scripts/jd_sgmh.js >> /scripts/logs/jd_sgmh.log 2>&1

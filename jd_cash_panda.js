@@ -129,8 +129,8 @@ async function appindex(info=false) {
                 'shareDate': data.data.result.shareDate
               }
               $.shareDate = data.data.result.shareDate;
-              // $.log(`shareDate: ${$.shareDate}`)
-              // console.log(helpInfo)
+               $.log(`shareDate: ${$.shareDate}`)
+               console.log(helpInfo)
               for (let task of data.data.result.taskInfos) {
                 if (task.type === 4) {
                   for (let i = task.doTimes; i < task.times; ++i) {
