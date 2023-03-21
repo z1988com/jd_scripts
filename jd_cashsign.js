@@ -41,7 +41,7 @@ if ($.isNode()) {
                 continue
             }
             await sign();
-            await $.wait(2000)
+            await $.wait(3*1000)
         }
     }
 })()
