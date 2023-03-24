@@ -202,7 +202,7 @@ function getvenderName(venderId) {
           console.log(`\n${$.name}: 第${$.that_num}个 API查询请求失败 ‼️‼️`)
           $.logErr(err);
         } else {
-          console.log(data)
+          //console.log(data)
           data = JSON.parse(data)
           shopName = data.shopName
           console.log(`第${$.that_num}个【`+(shopName || $.that_token)+`】`)
