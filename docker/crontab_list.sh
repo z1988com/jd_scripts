@@ -644,6 +644,14 @@
 
 #东东爱消除
 19 10 * * *  node /scripts/jd_jrsign.js >> /scripts/logs/jd_jrsign.log 2>&1
+
+
+#赛跑兑10红包
+1 1 * * *  node /scripts/jd_joyrunred.js >> /scripts/logs/jd_joyrunred.log 2>&1
+
+#赛跑兑10红包
+15 11 * * *  node /scripts/jd_joymatch.js >> /scripts/logs/jd_joymatch.log 2>&1
+
 ##############值得买##############
 
 #10 0 * * * * node /scripts/smzdm_mission.js >> /scripts/logs/smzdm_mission.log 2>&1
