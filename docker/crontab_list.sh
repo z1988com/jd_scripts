@@ -125,7 +125,7 @@
 # 宠汪汪积分兑换京豆
 0 0-16/8 * * * node /scripts/jd_joy_reward.js >> /scripts/logs/jd_joy_reward.log 2>&1
 # 宠汪汪喂食
-#25 */1 * * * node /scripts/jd_joy_feedPets.js >> /scripts/logs/jd_joy_feedPets.log 2>&1
+23 15 * * * node /scripts/jd_joy_feedPets.js >> /scripts/logs/jd_joy_feedPets.log 2>&1
 # 宠汪汪邀请助力
 7 13 * * * node /scripts/jd_joy_run.js >> /scripts/logs/jd_joy_run.log 2>&1
 # 宠汪汪偷好友积分与狗粮
