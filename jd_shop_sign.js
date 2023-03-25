@@ -132,7 +132,10 @@ async function babel_diy_zeus(){
     if ($.TokenLists[j]=='') {continue}
     await getvenderId($.TokenLists[j])
     if (vender=='') {continue}
-    await getvenderName(vender)
+    //await getvenderName(vender)
+	console.log(`第${$.that_num}个【`+( $.that_token)+`】`)
+	message +=`第${$.that_num}个【`+( $.that_token)+`】`
+		  
     await getActivityInfo($.TokenLists[j],vender)
     await signCollectGift($.TokenLists[j],vender,activityId)
     await taskUrl($.TokenLists[j],vender)
