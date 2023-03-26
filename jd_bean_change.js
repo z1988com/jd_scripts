@@ -121,11 +121,10 @@ let llPetError=false;
 let strGuoqi="";
 let RemainMessage = '\n';
 RemainMessage += "⭕提醒:⭕" + '\n';
-RemainMessage += '【特价金币】京东特价版->我的->金币(可兑换无门槛红包)\n';
+RemainMessage += '【京喜特价金币】京东特价版->我的->金币(可兑换无门槛红包)\n';
 RemainMessage += '【京东赚赚】微信->京东赚赚小程序->底部赚好礼->兑换红包(京东使用)4月中旬下线，尽快兑换\n';
 RemainMessage += '【领现金】京东->搜领现金(可微信提现或兑换红包)\n';
 RemainMessage += '【东东农场】京东->我的->东东农场,完成可兑换无门槛红包,可用于任意商品\n';
-RemainMessage += '【京东金融】京东金融app->我的->养猪猪,完成是白条支付券,支付方式选白条支付时立减\n';
 RemainMessage += '【其他】不同类别红包不能叠加使用，自测';
 
 let WP_APP_TOKEN_ONE = "";
@@ -1919,7 +1918,7 @@ function jdfruitRequest(function_id, body = {}, timeout = 1000) {
 								llgeterror = true;
 							}
 							else
-								$.JDwaterEveryDayT = data.totalWaterTaskInit.totalWaterTaskTimes;
+								$.JDwaterEveryDayT = data.firstWaterInit.totalWaterTimes;
 						}
 					}
 				} catch (e) {
@@ -2006,7 +2005,7 @@ async function getjdfruit() {
 								$.JdtreeTotalEnergy = $.farmInfo.farmUserPro.treeTotalEnergy;
 								$.treeState = $.farmInfo.treeState;
 								let waterEveryDayT = $.JDwaterEveryDayT;
-								let waterTotalT = ($.farmInfo.farmUserPro.treeTotalEnergy - $.farmInfo.farmUserPro.treeEnergy - $.farmInfo.farmUserPro.totalEnergy) / 10; //一共还需浇多少次水
+								let waterTotalT = ($.farmInfo.farmUserPro.treeTotalEnergy - $.farmInfo.farmUserPro.treeEnergy) / 10; //一共还需浇多少次水
 								let waterD = Math.ceil(waterTotalT / waterEveryDayT);
 
 								$.JdwaterTotalT = waterTotalT;
