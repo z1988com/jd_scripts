@@ -652,6 +652,11 @@
 #赛跑兑10红包
 15 11 * * *  node /scripts/jd_joymatch.js >> /scripts/logs/jd_joymatch.log 2>&1
 
+
+
+
+#京喜特价抽现金
+23 8 * * *  node /scripts/jd_cxjhelp.js >> /scripts/logs/jd_cxjhelp.log 2>&1
 ##############值得买##############
 
 #10 0 * * * * node /scripts/smzdm_mission.js >> /scripts/logs/smzdm_mission.log 2>&1
