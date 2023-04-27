@@ -73,11 +73,11 @@ let lnrun = 0;
 	  
 	  if (lnrun == 3) {
 		console.log(`\n【访问接口次数达到3次，休息15分钟.....】\n`);
-		await $.wait(10*60 * 1000);
+		await $.wait(15*60 * 1000);
 		lnrun = 0;
 	  }else{
 		    console.log(`休息5分钟`);
-         await $.wait(5*60*1000) 
+         await $.wait(15*60*1000) 
 	  }
 	  
 			
