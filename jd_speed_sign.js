@@ -18,7 +18,7 @@ cron "15 2,14 * * *" script-path=jd_speed_sign.js,tag=京东极速版
 ============小火箭=========
 京东极速版 = type=cron,script-path=jd_speed_sign.js, cronexpr="15 2,14 * * *", timeout=33600, enable=true
 */
-const $ = new Env('京东极速版');
+const $ = new Env('京喜特价赚金币');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
@@ -205,15 +205,20 @@ async function taskList() {
                 $.taskName = task.taskInfo.mainTitle
                 if (task.taskInfo.status === 0) {
                   if (task.taskType >= 1000) {
+					  await $.wait(1000);
                     await doTask(task.taskType)
                     await $.wait(3000)
                   } else {
                     $.canStartNewItem = true
                     while ($.canStartNewItem) {
                       if (task.taskType !== 3) {
+						  await $.wait(500);
                         await queryItem(task.taskType)
+						await $.wait(500);
                       } else {
+						  await $.wait(500);
                         await startItem("", task.taskType)
+						await $.wait(500);
                       }
                     }
                   }
@@ -279,8 +284,9 @@ async function queryJoy() {
               data = JSON.parse(data);
               if (data.data.taskBubbles)
                 for (let task of data.data.taskBubbles) {
+				  await $.wait(3000);
                   await rewardTask(task.id, task.activeType)
-                  await $.wait(5000)
+                  await $.wait(3000)
                 }
             }
           }
@@ -334,11 +340,14 @@ async function queryItem(activeType = 1) {
         if (err) {
           console.log(`${JSON.stringify(err)}`)
           console.log(`${$.name} API请求失败，请检查网路重试`)
+		  await $.wait(1000);
         } else {
           if (safeGet(data)) {
             data = JSON.parse(data);
             if (data.code === 0 && data.data) {
+			  await $.wait(1000);
               await startItem(data.data.nextResource, activeType)
+			  await $.wait(1000);
             } else {
               console.log(`商品任务开启失败，${data.message}`)
               $.canStartNewItem = false
@@ -379,10 +388,11 @@ async function startItem(activeId, activeType) {
               if (data.data.taskInfo.isTaskLimit === 0) {
                 let {videoBrowsing, taskCompletionProgress, taskCompletionLimit} = data.data.taskInfo
                 if (activeType !== 3)
-                  videoBrowsing = activeType === 1 ? 10 : 20
+                  videoBrowsing = activeType === 1 ? 5 : 10
                 console.log(`【${taskCompletionProgress + 1}/${taskCompletionLimit}】浏览商品任务记录成功，等待${videoBrowsing}秒`)
                 await $.wait(videoBrowsing * 1000)
                 await endItem(data.data.uuid, activeType, activeId, activeType === 3 ? videoBrowsing : "")
+				await $.wait(1000);
               } else {
                 console.log(`${$.taskName}任务已达上限`)
                 $.canStartNewItem = false
@@ -425,7 +435,9 @@ async function endItem(uuid, activeType, activeId = "", videoTimeLength = "") {
           if (safeGet(data)) {
             data = JSON.parse(data);
             if (data.code === 0 && data.isSuccess) {
+			  await $.wait(1000);
               await rewardItem(uuid, activeType, activeId, videoTimeLength)
+			  await $.wait(1000);
             } else {
               console.log(`${$.taskName}任务结束失败，${data.message}`)
             }
