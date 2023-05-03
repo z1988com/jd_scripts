@@ -653,6 +653,9 @@
 15 11 * * *  node /scripts/jd_joymatch.js >> /scripts/logs/jd_joymatch.log 2>&1
 
 
+#每日抽豆
+39 13 * * *  node /scripts/jd_dygetbeans.js >> /scripts/logs/jd_dygetbeans.log 2>&1
+
 
 
 #京喜特价抽现金
