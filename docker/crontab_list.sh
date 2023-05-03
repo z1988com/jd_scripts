@@ -668,6 +668,10 @@
 #天天领红包 任务+开红包
 28 14 * * *  node /scripts/jd_ttlhb.js >> /scripts/logs/jd_ttlhb.log 2>&1
 
+
+#4.29-5.10 超级品牌日
+31 0,16 29-30,1-10 4,5 *  node /scripts/jd_pp.js >> /scripts/logs/jd_pp.log 2>&1
+
 ##############值得买##############
 
 #10 0 * * * * node /scripts/smzdm_mission.js >> /scripts/logs/smzdm_mission.log 2>&1
