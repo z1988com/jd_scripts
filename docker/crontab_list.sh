@@ -660,6 +660,14 @@
 
 #京喜特价抽现金
 23 8 * * *  node /scripts/jd_cxjhelp.js >> /scripts/logs/jd_cxjhelp.log 2>&1
+
+
+#天天签到礼享金 入口：app首页-家电家居-底部签到
+38 13 * * *  node /scripts/jd_ttqdlxj.js >> /scripts/logs/jd_ttqdlxj.log 2>&1
+
+#天天领红包 任务+开红包
+28 14 * * *  node /scripts/jd_ttlhb.js >> /scripts/logs/jd_ttlhb.log 2>&1
+
 ##############值得买##############
 
 #10 0 * * * * node /scripts/smzdm_mission.js >> /scripts/logs/smzdm_mission.log 2>&1
