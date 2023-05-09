@@ -581,23 +581,23 @@
 36 9,20 * * * node /scripts/jd_subject.js >> /scripts/logs/jd_subject.log 2>&
 
 
-#特价版大赢家 京东特价APP首页-赚钱大赢家
-30 13 * * * node /scripts/jd_makemoneyshop.js >> /scripts/logs/jd_makemoneyshop.log 2>&
+#特价版大赢家 京东特价APP首页-赚钱大赢家 20230509 第一个ck黑了
+#30 13 * * * node /scripts/jd_makemoneyshop.js >> /scripts/logs/jd_makemoneyshop.log 2>&
 
 
-#秒秒币 add 20221130
-26 11 * * * node /scripts/jd_ms.js >> /scripts/logs/jd_ms.log 2>&1
+#秒秒币 add 20221130  下线了
+#26 11 * * * node /scripts/jd_ms.js >> /scripts/logs/jd_ms.log 2>&1
 
-#点点券 add 20221130
-26 12 * * * node /scripts/jd_necklace_6dy.js >> /scripts/logs/jd_necklace_6dy.log 2>&1
+#点点券 add 20221130 下线了
+#26 12 * * * node /scripts/jd_necklace_6dy.js >> /scripts/logs/jd_necklace_6dy.log 2>&1
 
 
 #入口：京东app-搜小时购-抽888 
 16 11 * * * node /scripts/jd_lotty888.js >> /scripts/logs/jd_lotty888.log 2>&1
 
 
-#京东小魔方
-55 11 * * * node /scripts/jd_mf_new.js >> /scripts/logs/jd_mf_new.log 2>&1
+#京东小魔方 下线了
+#55 11 * * * node /scripts/jd_mf_new.js >> /scripts/logs/jd_mf_new.log 2>&1
 
 
 #医药馆抽豆
