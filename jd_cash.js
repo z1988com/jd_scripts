@@ -79,7 +79,7 @@ let allMessage = '';
 	  
 	   console.log(`休息30秒`)
         
-        await $.wait(3000)
+        await $.wait(30*1000)
     }
   }
   if (allMessage) {
