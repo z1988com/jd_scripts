@@ -55,15 +55,16 @@ if (new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate() == date.getDa
 				await $.wait(30 * 1000);
 			}			
 		}else{
-			console.log(`检测到403，暂停2分钟后重试`);
-			await $.wait(2*60 * 1000);
+			console.log(`检测到403，暂停5分钟后重试`);
+			await $.wait(5*60 * 1000);
 			llAPIError=false;
 			await Promise.all(TaskList);
 		}
 		
         TaskList = [];
       }
-      
+	  console.log(`当前账号完成，等待60秒`);
+      await $.wait(60 * 1000);
       if (llAPIError) {
         console.log(`黑IP了，赶紧重新拨号换个IP吧`);
         break;
