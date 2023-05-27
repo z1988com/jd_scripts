@@ -12,7 +12,7 @@ const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 let NowHour = new Date().getHours();
 
 //默认开启缓存模式
-let checkbeanDetailMode=1;
+let checkbeanDetailMode=0;
 if ($.isNode() && process.env.BEANCHANGE_BEANDETAILMODE){
 	checkbeanDetailMode=process.env.BEANCHANGE_BEANDETAILMODE*1;
 }
