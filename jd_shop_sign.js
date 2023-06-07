@@ -109,6 +109,7 @@ if ($.isNode()) {
       await babel_diy_zeus();
 	  await showMsg()
       //if(i  <1 ) {await showMsg()}
+	  await $.wait(1000*15);  
     }
   }
 })()
