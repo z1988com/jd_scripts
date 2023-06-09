@@ -58,6 +58,8 @@ $.reqnum=1;
             $.UA = require('./USER_AGENTS').UARAM();
             await shareCodesFormat();
             await jdFruit();
+			console.log(`休息一分钟.....`);
+			await $.wait(60 * 1000);
         }
     }
 })()
