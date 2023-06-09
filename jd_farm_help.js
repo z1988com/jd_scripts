@@ -100,6 +100,9 @@ async function doDailyTask() {
     await getAwardInviteFriend();
 
     await turntableFarm()//天天抽奖得好礼
+	
+	
+	await getExtraAward()
 }
 async function predictionFruit() {
     console.log('开始预测水果成熟时间\n');
