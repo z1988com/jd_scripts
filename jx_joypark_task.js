@@ -150,6 +150,11 @@ message = ""
         //   $.yq_taskid = task.id
         // }
       }
+	  
+	  console.log(`休息30秒`);
+            await $.wait(30*1000);
+			
+			
     }
   }
 /*

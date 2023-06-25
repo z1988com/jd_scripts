@@ -125,6 +125,9 @@ message = ""
                 await $.wait(500);
             }
         }
+		
+		console.log(`休息30秒`);
+        await $.wait(30*1000);
     }
 })()
     .catch((e) => $.logErr(e))
