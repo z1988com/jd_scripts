@@ -680,3 +680,6 @@
 
 #10 0 * * * * node /scripts/smzdm_mission.js >> /scripts/logs/smzdm_mission.log 2>&1
 
+############## 联通 ##############
+
+10 10,28 * * * * node /scripts/unicom_day_sign.js >> /scripts/logs/unicom_day_sign.log 2>&1
