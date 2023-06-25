@@ -1,13 +1,16 @@
 /*
 积分换话费
-入口：首页-生活·缴费-积分换话费
-cron "33 5 * * *" jd_dwapp.js
+入口：首页-生活·缴费-积分换话费 
+update：2023/6/23
+20 2,15 * * * jd_dwapp.js
 */
+
 const $ = new Env('积分换话费');
 const notify = $.isNode() ? require('./sendNotify') : '';
+//Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 CryptoJS = $.isNode() ? require('crypto-js') : CryptoJS;
-
+//IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '';
 if ($.isNode()) {
     Object.keys(jdCookieNode).forEach((item) => { cookiesArr.push(jdCookieNode[item]) })
@@ -28,7 +31,7 @@ if ($.isNode()) {
             $.isLogin = true;
             $.nickName = '';
             message = '';
-            //await TotalBean();
+            await TotalBean();
             console.log(`\n******开始【京东账号${$.index}】${$.nickName || $.UserName}*********\n`);
             if (!$.isLogin) {
                 $.msg($.name, `【提示】cookie已失效`, `京东账号${$.index} ${$.nickName || $.UserName}\n请重新登录获取\nhttps://bean.m.jd.com/bean/signIndex.action`, { "open-url": "https://bean.m.jd.com/bean/signIndex.action" });
@@ -38,25 +41,31 @@ if ($.isNode()) {
                 continue
             }
             $.UUID = getUUID('xxxxxxxxxxxxxxxx');
-            await main()
-			
-			console.log(`休息一分钟`);
-			await $.wait(1*60*1000) 
+            await main();
+            await $.wait(3000);
         }
     }
 })().catch((e) => { $.log('', `❌ ${$.name}, 失败! 原因: ${e}!`, '') }).finally(() => { $.done(); })
 
 async function main() {
     $.log("去签到")
-    await usersign()
+    await usersign();
+    await $.wait(2000);
     await tasklist();
     if ($.tasklist) {
-        for (let i = 0; i < $.tasklist.length; i++) {
-            console.log(`去领取${$.tasklist[i].taskDesc}任务`)
-            await taskrecord($.tasklist[i].id)
-            await $.wait(5000);
-            console.log(`去领取积分`)
-            await taskreceive($.tasklist[i].id)
+        for (let i of $.tasklist) {
+            if (i.viewStatus == 0) {
+                console.log(`去做 ${i.taskDesc}`);
+                await taskrecord(i.id);
+                await $.wait(3000);
+                console.log(`去领积分`);
+                await taskreceive(i.id)
+            } else if (i.viewStatus == 2) {
+                console.log(`去领积分`);
+                await taskreceive(i.id);
+            } else if (i.viewStatus == 1) {
+                $.log(`${i.name} 已完成浏览`);
+            }
         }
     }
 }
@@ -74,9 +83,9 @@ async function taskrecord(id) {
                     if (data) {
                         if (data.code === 200) {
                             if (data.data.dwUserTask) {
-                                $.log(" 领取任务成功")
+                                $.log("----领取任务成功")
                             } else {
-                                $.log(" 此任务已经领取过了")
+                                $.log("----此任务已经领取过了")
                             }
                         } else {
                             console.log(JSON.stringify(data))
@@ -92,6 +101,7 @@ async function taskrecord(id) {
     })
 
 }
+
 async function taskreceive(id) {
     enc = await sign(id)
     let body = { "id": id, ...enc }
@@ -105,11 +115,11 @@ async function taskreceive(id) {
                     data = JSON.parse(data)
                     if (data) {
                         if (data.code === 200 && data.data.success) {
-                            console.log(` 领取任务积分：获得${data.data.giveScoreNum}`)
+                            console.log(`----领取成功：获得${data.data.giveScoreNum}积分`);
                         } else if (data.code === 200 && !data.data.success) {
-                            console.log(" 积分已经领取完了")
+                            console.log("----积分已经领取完了");
                         } else {
-                            console.log(JSON.stringify(data))
+                            console.log(JSON.stringify(data));
                         }
                     }
                 }
@@ -121,22 +131,38 @@ async function taskreceive(id) {
         })
     })
 }
+
 async function usersign() {
-    body = await sign()
+    body = await sign();
+    body.channelSource = 'txzs';
+    let opt = {
+        url: `https://api.m.jd.com/user/color/task/dwSign`,
+        body: `appid=txsm-m&client=h5&functionId=DATAWALLET_USER_SIGN&body=${encodeURIComponent(JSON.stringify(body))}`,
+        headers: {
+            "Origin": "https://txsm-m.jd.com",
+            "Accept": "*/*",
+            "User-Agent": `jdapp;iPhone;10.1.0;13.5;${$.UUID};network/wifi;model/iPhone11,6;addressid/4596882376;appBuild/167774;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1`,
+            "Referer": "https://txsm-m.jd.com/",
+            "Cookie": cookie,
+        }
+    }
     return new Promise(resolve => {
-        $.post(taskPostUrl("dwSign", body), (err, resp, data) => {
+        $.post(opt, (err, resp, data) => {
             try {
                 if (err) {
                     console.log(`${err}`)
                     console.log(`${$.name} API请求失败，请检查网路重试`)
                 } else {
-                    data = JSON.parse(data)
+                    data = JSON.parse(data);
                     if (data) {
                         if (data.code === 200) {
-                            console.log(`签到成功：获得积分${data.data.signInfo.signNum}\n`)
+                            console.log(`签到成功：获得积分${data.data.signInfo.signNum}`);
+                            $.log(`总积分：${data.data.totalNum}\n`);
+                        } else if(data.code === 302){
+                            console.log("已完成签到！！！\n");
                         } else {
-                            console.log("似乎签到完成了\n")
-                        }
+							$.log(JSON.stringify(data));
+						}
                     }
                 }
             } catch (e) {
@@ -147,10 +173,24 @@ async function usersign() {
         })
     })
 }
+
 async function tasklist() {
-    body = await sign()
+    body = await sign();
+    body.channelSource = 'txzs';
+    let opt = {
+        url: `https://api.m.jd.com/user/color/task/dwList`,
+        body: `appid=txsm-m&client=h5&functionId=dwapp_task_dwList&body=${encodeURIComponent(JSON.stringify(body))}`,
+        headers: {
+            "Origin": "https://txsm-m.jd.com",
+            "Accept": "*/*",
+            "User-Agent": `jdapp;iPhone;10.1.0;13.5;${$.UUID};network/wifi;model/iPhone11,6;addressid/4596882376;appBuild/167774;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1`,
+            "Referer": "https://txsm-m.jd.com/",
+            "Cookie": cookie,
+        }
+    }
+
     return new Promise(resolve => {
-        $.post(taskPostUrl("task/dwList", body), (err, resp, data) => {
+        $.post(opt, (err, resp, data) => {
             try {
                 if (err) {
                     console.log(`${err}`)
@@ -188,6 +228,7 @@ function taskPostUrl(function_id, body) {
         }
     }
 }
+
 function TotalBean() {
     return new Promise(async resolve => {
         const options = {
@@ -232,6 +273,7 @@ function TotalBean() {
         })
     })
 }
+
 function getUUID(format = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', UpperCase = 0) {
     return format.replace(/[xy]/g, function (c) {
         var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
@@ -243,6 +285,7 @@ function getUUID(format = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', UpperCase 
         return uuid;
     });
 }
+
 async function sign(en) {
     time = new Date().getTime();
     let encStr = en || '';
