@@ -62,7 +62,7 @@
 #来电好物季
 #10 1 * * * node /scripts/jd_ldhwj.js >> /scripts/logs/jd_ldhwj.log 2>&1
 #积分换话费 入口：首页-生活·缴费-积分换话费
-#33 5,17 * * * node /scripts/jd_dwapp.js >> /scripts/logs/jd_dwapp.log 2>&1
+26 8,17 * * * node /scripts/jd_dwapp.js >> /scripts/logs/jd_dwapp.log 2>&1
 
 
 #领券中心签到
