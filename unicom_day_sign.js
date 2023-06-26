@@ -59,8 +59,8 @@ if ($.isNode()) {
 	  //await showMsg()
       //if(i  <1 ) {await showMsg()}
 	  if(  i <  cookiesArr.length){
-		console.log(`休息15秒`)
-		await $.wait(1000*15);   
+		console.log(`休息60秒`)
+		await $.wait(1000*60);   
 	  }
 	   
     }
