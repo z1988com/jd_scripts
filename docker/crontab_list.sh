@@ -54,7 +54,7 @@
 #18 9,19 13-25 8 * node /scripts/gua_xiaolong.js >> /scripts/logs/gua_xiaolong.log 2>&1
 
 #活动路径  首页搜索 金机馆
-33 3,6 8-20 8 * node /scripts/jd_golden_machine.js >> /scripts/logs/jd_golden_machine.log 2>&1
+#33 3,6 8-20 8 * node /scripts/jd_golden_machine.js >> /scripts/logs/jd_golden_machine.log 2>&1
 
 #京东工业品抽奖
 10 5 17,18 8 * node /scripts/jd_industryLottery.js >> /scripts/logs/jd_industryLottery.log 2>&1
@@ -76,7 +76,7 @@
 
 
 #东东世界
-20 12 * * * node /scripts/gua_ddworld.js >> /scripts/logs/gua_ddworld.log 2>&1
+#20 12 * * * node /scripts/gua_ddworld.js >> /scripts/logs/gua_ddworld.log 2>&1
 
 #10.20~10.31 城城领现金
 #27 22,0-23/5 9-21 1 *  node /scripts/gua_city.js >> /scripts/logs/gua_city.log 2>&1
@@ -178,11 +178,11 @@
 # 京喜工厂
 #50 * * * * node /scripts/jd_dreamFactory.js >> /scripts/logs/jd_dreamFactory.log 2>&1
 # 东东小窝16 22 * * *
-25 6,23 * * * node /scripts/jd_small_home.js >> /scripts/logs/jd_small_home.log 2>&1
+#25 6,23 * * * node /scripts/jd_small_home.js >> /scripts/logs/jd_small_home.log 2>&1
 # 东东工厂
 #26 * * * * node /scripts/jd_jdfactory.js >> /scripts/logs/jd_jdfactory.log 2>&1
 # 东东工厂
-45 5,17 * * *node /scripts/jd_jdfactory_help.js >> /scripts/logs/jd_jdfactory_help.log 2>&1
+#45 5,17 * * *node /scripts/jd_jdfactory_help.js >> /scripts/logs/jd_jdfactory_help.log 2>&1
 
 # 赚京豆(微信小程序) 10,40 0,1 * * *  火爆任务暂停[20220112] 可以运行 20220222
 21,50 0,1 * * * node /scripts/jd_syj.js >> /scripts/logs/jd_syj.log 2>&1
@@ -331,9 +331,9 @@
 #3 0 * * * node /scripts/jd_angryCash.js >> /scripts/logs/jd_angryCash.log 2>&1
 
 #财富大陆 只运行合成珍珠
-33 0-23/2 * * * node /scripts/gua_wealth_island.js >> /scripts/logs/gua_wealth_island.log 2>&1
+# 33 0-23/2 * * * node /scripts/gua_wealth_island.js >> /scripts/logs/gua_wealth_island.log 2>&1
 #财富大陆 
-45 0-23/6 * * *  node /scripts/jd_cfd.js >> /scripts/logs/jd_cfd.log 2>&1
+#45 0-23/6 * * *  node /scripts/jd_cfd.js >> /scripts/logs/jd_cfd.log 2>&1
 
 
 #店铺签到
