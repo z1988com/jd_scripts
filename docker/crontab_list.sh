@@ -682,4 +682,4 @@
 
 ############## 联通 ##############
 
-10 10,28 * * * * node /scripts/unicom_day_sign.js >> /scripts/logs/unicom_day_sign.log 2>&1
+10 10,18 * * * node /scripts/unicom_day_sign.js >> /scripts/logs/unicom_day_sign.log 2>&1
