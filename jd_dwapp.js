@@ -2,7 +2,7 @@
 积分换话费
 入口：首页-生活·缴费-积分换话费 
 update：2023/6/23
-20 2,15 * * * jd_dwapp.js 
+20 2,15 * * * jd_dwapp.js
 */
 
 const $ = new Env('积分换话费');
@@ -42,7 +42,7 @@ if ($.isNode()) {
             }
             $.UUID = getUUID('xxxxxxxxxxxxxxxx');
             await main();
-			console.log(`休息30秒`);
+            console.log(`休息30秒`);
             await $.wait(30*1000);
         }
     }
@@ -198,7 +198,7 @@ async function tasklist() {
                     console.log(`${$.name} API请求失败，请检查网路重试`)
                 } else {
                     data = JSON.parse(data)
-                    if (data) {
+                    if (JSON.stringify(data.data) !='{}') {
                         $.tasklist = data.data
                     }
                 }
