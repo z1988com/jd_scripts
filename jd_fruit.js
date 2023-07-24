@@ -76,6 +76,8 @@ $.reqnum = 1;
             $.UA = ua.UARAM ? ua.UARAM() : ua.USER_AGENT;
             //await shareCodesFormat();
             await jdFruit();
+			console.log(`\n【访问接口次数达到1次，休息1分钟.....】\n`);
+			await $.wait(60 * 1000);
         }
     }
     fs.writeFile('./fruit_helpcode', JSON.stringify(cachecode), (e) => { e && console.log(e) });
