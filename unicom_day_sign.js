@@ -35,7 +35,7 @@ if ($.isNode()) {
       $.nickName = '';
       message = '';
       await TotalBean();
-      console.log(`\n******开始【联通账号 ${$.index}】${$.nickName || $.UserName}*********\n`);
+      console.log(`\n******开始【联通账号 ${$.index}】${$.nickName || $.UserName} *********\n`);
       if ( !$.isLogin) {
         $.msg($.name, `【提示】cookie已失效`, `京东账号${$.index} ${$.nickName || $.UserName}\n请重新登录获取\nhttps://bean.m.jd.com/bean/signIndex.action`, {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
 
@@ -44,6 +44,7 @@ if ($.isNode()) {
         }
         continue
       }
+	  
 	  //签到
 	  await signinDaySign();
 	  await $.wait(5000);
@@ -60,8 +61,8 @@ if ($.isNode()) {
 	  //await showMsg()
       //if(i  <1 ) {await showMsg()}
 	  if(  i <  cookiesArr.length){
-		console.log(`休息300秒`)
-		await $.wait(1000*300);   
+		console.log(`休息120秒`)
+		await $.wait(1000*120);   
 	  }
 	   
     }
@@ -231,7 +232,7 @@ async function signinDaySign(  ) {
     try {
       if (err) {
         console.log(`${JSON.stringify(err)}`)
-        console.log(`orderReward API请求失败，请检查网路重试`)
+        console.log(`signinDaySign API请求失败，请检查网路重试`)
       } else {
 	
         if (safeGet(data)) {
@@ -269,7 +270,7 @@ async function convertSignboard(  ) {
     try {
       if (err) {
         console.log(`${JSON.stringify(err)}`)
-        console.log(`orderReward API请求失败，请检查网路重试`)
+        console.log(`convertSignboard API请求失败，请检查网路重试`)
       } else {
 		console.log(`${data}`)
         if (safeGet(data)) {
@@ -339,7 +340,7 @@ async function signinGetContinuous(  ) {
 }
 
 function TotalBean() {
-	
+
   return new Promise(resolve => {
     const options = {
       url: "https://act.10010.com/SigninApp/signin/getIntegral",
@@ -353,7 +354,7 @@ function TotalBean() {
 		'accept-encoding': 'gzip, deflate',
 		'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7;',
 		
-		'user-agent':'Mozilla/5.0 (Linux; Android 9; PCT-AL10 Build/PQ3B.190801.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.114 Mobile Safari/537.36; unicom{version:android@10.0400,desmobile:18676017878};devicetype{deviceBrand:HUAWEI,deviceModel:PCT-AL10};{yw_code:}',
+		'user-agent':'Mozilla/5.0 (Linux; Android 9; PCT-AL10 Build/PQ3B.190801.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.114 Mobile Safari/537.36; unicom{version:android@10.0400,desmobile:${$.nickName}};devicetype{deviceBrand:HUAWEI,deviceModel:PCT-AL10};{yw_code:}',
 		'referer': 'https://img.client.10010.com',
 		'Cookie': cookie
       }
@@ -403,7 +404,7 @@ function taskUrl(url,body, cookie ) {
 		'accept-encoding': 'gzip, deflate',
 		'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7;',
 		
-		'user-agent':'Mozilla/5.0 (Linux; Android 9; PCT-AL10 Build/PQ3B.190801.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.114 Mobile Safari/537.36; unicom{version:android@10.0400,desmobile:18676017878};devicetype{deviceBrand:HUAWEI,deviceModel:PCT-AL10};{yw_code:}',
+		'user-agent':'Mozilla/5.0 (Linux; Android 9; PCT-AL10 Build/PQ3B.190801.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.114 Mobile Safari/537.36; unicom{version:android@10.0400,desmobile:${$.nickName}};devicetype{deviceBrand:HUAWEI,deviceModel:PCT-AL10};{yw_code:}',
 		'referer': 'https://img.client.10010.com',
 		'Cookie': cookie
 	  },
