@@ -46,16 +46,16 @@ if ($.isNode()) {
       }
 	  //签到
 	  await signinDaySign();
-	  await $.wait(1000);
+	  await $.wait(5000);
 	  //积分
 	  await getIntegral();
-	  await $.wait(1000);
+	  await $.wait(5000);
 	  //红包
 	  await getConvertTelephone();
-	  await $.wait(1000);
+	  await $.wait(5000);
 	  //签到天数
 	  await signinGetContinuous();
-	  await $.wait(1000);
+	  await $.wait(5000);
       //await signinGetContinuous();
 	  //await showMsg()
       //if(i  <1 ) {await showMsg()}
