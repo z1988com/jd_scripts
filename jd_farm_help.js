@@ -84,6 +84,8 @@ async function jdFruit() {
 			
             await masterHelpShare();//助力好友
             await doDailyTask();
+			
+			await getExtraAward()
         } else {
             console.log(`初始化农场数据异常, 请登录京东 app查看农场0元水果功能是否正常,农场初始化数据: ${JSON.stringify($.farmInfo)}`);
             message = `【数据异常】请手动登录京东app查看此账号${$.name}是否正常`;
