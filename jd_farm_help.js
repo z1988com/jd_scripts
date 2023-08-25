@@ -8,41 +8,42 @@ epxort FRUIT_DELAY = '1000',设置等待时间(毫秒)，默认请求5次接口�
 */
 const $ = new Env('东东农场-助力');
 let cookiesArr = [], cookie = '', jdFruitShareArr = [], isBox = false, notify, newShareCodes, allMessage = '';
-const share_code_url = process.env.UPDATE_SHARE_CODE_URL ?? '';
-const md5 = $.isNode() ? require('md5-node'): '';;
-
 //助力好友分享码(最多3个,否则后面的助力失败),原因:京东农场每人每天只有3次助力机会
 //此此内容是IOS用户下载脚本到本地使用，填写互助码的地方，同一京东账号的好友互助码请使用@符号隔开。
 //下面给出两个账号的填写示例（iOS只支持2个京东账号）
 let shareCodes = [ // 这个列表填入你要助力的好友的shareCode
-    ''
+    '6a5c09f030b541d381985bff50fffb6a',
+'5fc5200af211402fa7fc5439c19280b1',
+'d6bc891c2e054da68c4e097e181efa28',
+'da8e4b354fc24deaabf2da61240f6fa3',
+'bd7b177dcca0452797349c7a96da4556',
+'58b560393e6d4faa978340791a96eb0e',
+'9dd32ee7462f4a02a21a5e8b175cf17c',
+'3751b62c765e44b398c4aa7542624d43',
+'dd2bdfed614b424ca17226cf1c97ed2e',
+'31152cbce75c4350acedca299e8c86b3',
+'620b9c575add464880bd238e4453c6f4',
+'d86a719cec714eb38e887ef9cb7219e6',
+'724b9e8e6ee642268a3126a2fee063d7',
+'6254b5a9b3c54522a0787dc83e312d84',
+'109a3bc615a3458db23dd73ac5fc6c79',
+'2d0bfb0b86d749bbb7880fa639d3184f',
+'5aefb889905d4fcdb61ad39153104dd0',
+'999d439c40dc45e09cf9128e1a76cf6f',
+'18f45da10e174a848acb87855064b169',
+'b91636905a754e4d8b1394d619aace02',
+'d1c0c5f5dfa94aa0b6e2f17fab4aed38',
+'e30efa34e01d4c10851fabb934d6bc52',
+'d1c0c5f5dfa94aa0b6e2f17fab4aed38',
+'03d22b493e354b38b9969b576c0b47fd',
+'03d22b493e354b38b9969b576c0b47fd',
+'90aa7fb9666347baabf2a4cebfc3f906',
+'af984c49298c4a3180efe279d47dba2d',
+'d06ed5198fa54592871383bc1afad808',
+'6896d6c308da419b9c8c4c3ff3cfff94',
+'fc0972059e204b6991d5babd86d1ac14',
+'4716b94f722f40f08dc2e90157bf159f'
 ]
-
-function readShareCode() {
-  return new Promise(async resolve => {
-    $.get({url: `${share_code_url}/jd_fruit`, timeout: 10000,}, (err, resp, data) => {
-      try {
-        if (err) {
-          console.log(`${JSON.stringify(err)}`)
-          console.log(`${$.name} API请求失败，请检查网路重试`)
-        } else {
-          if (data) {
-            console.log(`随机取个${randomCount}码放到您固定的互助码后面(不影响已有固定互助)`)
-            data = JSON.parse(data);
-          }
-        }
-      } catch (e) {
-        $.logErr(e, resp)
-      } finally {
-        resolve(data);
-      }
-    })
-    await $.wait(10000);
-    resolve()
-  })
-}
-shareCodes =  readShareCode();
-
 
 let message = '', subTitle = '', fulled = [], option = {}, isFruitFinished = false, ct=0;
 const retainWater = 100;//保留水滴大于多少g,默认100g;
