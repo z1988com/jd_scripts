@@ -41,7 +41,7 @@ function readShareCode() {
     resolve()
   })
 }
-shareCodes = await readShareCode();
+shareCodes =  readShareCode();
 
 
 let message = '', subTitle = '', fulled = [], option = {}, isFruitFinished = false, ct=0;
