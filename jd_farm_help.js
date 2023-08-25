@@ -8,12 +8,41 @@ epxort FRUIT_DELAY = '1000',设置等待时间(毫秒)，默认请求5次接口�
 */
 const $ = new Env('东东农场-助力');
 let cookiesArr = [], cookie = '', jdFruitShareArr = [], isBox = false, notify, newShareCodes, allMessage = '';
+const share_code_url = process.env.UPDATE_SHARE_CODE_URL ?? '';
+const md5 = $.isNode() ? require('md5-node'): '';;
+
 //助力好友分享码(最多3个,否则后面的助力失败),原因:京东农场每人每天只有3次助力机会
 //此此内容是IOS用户下载脚本到本地使用，填写互助码的地方，同一京东账号的好友互助码请使用@符号隔开。
 //下面给出两个账号的填写示例（iOS只支持2个京东账号）
 let shareCodes = [ // 这个列表填入你要助力的好友的shareCode
     ''
 ]
+
+function readShareCode() {
+  return new Promise(async resolve => {
+    $.get({url: `${share_code_url}/jd_fruit`, timeout: 10000,}, (err, resp, data) => {
+      try {
+        if (err) {
+          console.log(`${JSON.stringify(err)}`)
+          console.log(`${$.name} API请求失败，请检查网路重试`)
+        } else {
+          if (data) {
+            console.log(`随机取个${randomCount}码放到您固定的互助码后面(不影响已有固定互助)`)
+            data = JSON.parse(data);
+          }
+        }
+      } catch (e) {
+        $.logErr(e, resp)
+      } finally {
+        resolve(data);
+      }
+    })
+    await $.wait(10000);
+    resolve()
+  })
+}
+shareCodes = await readShareCode();
+
 
 let message = '', subTitle = '', fulled = [], option = {}, isFruitFinished = false, ct=0;
 const retainWater = 100;//保留水滴大于多少g,默认100g;
