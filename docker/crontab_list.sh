@@ -84,6 +84,10 @@
 #极速模式签到
 08 12,17 * * *  node /scripts/jd_speedtx.js >> /scripts/logs/jd_speedtx.log 2>&1
 
+
+#摇钱树任务 等级达到40级为满级，需要停止浇水3天，7天后开启新一轮活动
+38 10,19 * * *  node /scripts/jd_yqs.js >> /scripts/logs/jd_yqs.log 2>&1
+
 ##############值得买##############
 
 #10 0 * * * * node /scripts/smzdm_mission.js >> /scripts/logs/smzdm_mission.log 2>&1
