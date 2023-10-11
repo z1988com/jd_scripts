@@ -88,6 +88,12 @@
 #摇钱树任务 等级达到40级为满级，需要停止浇水3天，7天后开启新一轮活动
 38 10,19 * * *  node /scripts/jd_yqs.js >> /scripts/logs/jd_yqs.log 2>&1
 
+
+#Jd转赚红包
+05 11 * * *  node /scripts/jd_zzhb.js >> /scripts/logs/jd_zzhb.log 2>&1
+
+#Jd京喜特价抽现金
+10 11 * * *  node /scripts/jx_cxjhelp.js >> /scripts/logs/jx_cxjhelp.log 2>&1
 ##############值得买##############
 
 #10 0 * * * * node /scripts/smzdm_mission.js >> /scripts/logs/smzdm_mission.log 2>&1
