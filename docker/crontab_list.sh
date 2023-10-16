@@ -90,10 +90,10 @@
 
 
 #Jd转赚红包
-05 11 * * *  node /scripts/jd_zzhb.js >> /scripts/logs/jd_zzhb.log 2>&1
+#05 11 * * *  node /scripts/jd_zzhb.js >> /scripts/logs/jd_zzhb.log 2>&1
 
 #Jd京喜特价抽现金
-10 11 * * *  node /scripts/jx_cxjhelp.js >> /scripts/logs/jx_cxjhelp.log 2>&1
+#10 11 * * *  node /scripts/jx_cxjhelp.js >> /scripts/logs/jx_cxjhelp.log 2>&1
 
 
 ##############值得买##############
