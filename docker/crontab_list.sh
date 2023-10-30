@@ -95,12 +95,18 @@
 #Jd京喜特价抽现金
 #10 11 * * *  node /scripts/jx_cxjhelp.js >> /scripts/logs/jx_cxjhelp.log 2>&1
 
+#Jd每日红包
+23 6,16 * * *  node /scripts/jd_mrhb.js >> /scripts/logs/jd_mrhb.log 2>&1
+
 
 #汪汪乐园任务
 10 7,21 * * *  node /scripts/jd_wwpark_task.js >> /scripts/logs/jd_wwpark_task.log 2>&1
 
 #10.28-11.12 签到瓜分京豆
 12 8,18 * * *  node /scripts/jd_dlgf.js >> /scripts/logs/jd_dlgf.log 2>&1
+
+#新农场任务
+18 9,19 * * *  node /scripts/jd_fruit_new.js >> /scripts/logs/jd_fruit_new.log 2>&1
 
 
 
