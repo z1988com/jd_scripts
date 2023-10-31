@@ -113,6 +113,9 @@
 02 6,16 * * *  node /scripts/jd_farm_help.js >> /scripts/logs/jd_farm_help.log 2>&1
 
 
+#双十一红包
+3 0,10,20  node /scripts/gua_231111_Red.js >> /scripts/logs/gua_231111_Red.log 2>&1
+
 ##############值得买##############
 
 #10 0 * * * * node /scripts/smzdm_mission.js >> /scripts/logs/smzdm_mission.log 2>&1
