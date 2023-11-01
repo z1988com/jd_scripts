@@ -114,7 +114,7 @@
 
 
 #双十一红包
-3 0,10,20  node /scripts/gua_231111_Red.js >> /scripts/logs/gua_231111_Red.log 2>&1
+3 0,10,20 * * *  node /scripts/gua_231111_Red.js >> /scripts/logs/gua_231111_Red.log 2>&1
 
 ##############值得买##############
 
