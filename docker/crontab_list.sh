@@ -112,12 +112,19 @@
 #东东农场助力
 02 6,16 * * *  node /scripts/jd_farm_help.js >> /scripts/logs/jd_farm_help.log 2>&1
 
+#新东东农场助力
+02 7,17 * * *  node /scripts/jd_farm_help_new.js >> /scripts/logs/jd_farm_help_new.log 2>&1
+
 
 #双十一红包
 3 0,10,20 * * *  node /scripts/gua_231111_Red.js >> /scripts/logs/gua_231111_Red.log 2>&1
 
 #全民大乐透抽奖
 42 0,16  * * *  node /scripts/jd_qmLottery.js >> /scripts/logs/jd_qmLottery.log 2>&1
+
+
+#秒杀浏览商品领豆
+12 8,15  * * *  node /scripts/jd_seckillViewTask.js >> /scripts/logs/jd_seckillViewTask.log 2>&1
 
 
 ##############值得买##############
