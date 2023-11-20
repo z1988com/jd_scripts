@@ -41,7 +41,7 @@
 # 签到领现金
 #53 */4 * * * node /scripts/jd_cash.js >> /scripts/logs/jd_cash.log 2>&1
 #48 */4 * * * node /scripts/jd_cash_panda.js >> /scripts/logs/jd_cash_panda.log 2>&1
-48 */4 * * * node /scripts/jd_cashsign.js >> /scripts/logs/jd_cashsign.log 2>&1
+#48 */4 * * * node /scripts/jd_cashsign.js >> /scripts/logs/jd_cashsign.log 2>&1
 
 #东东乐园
 #30 7 * * * node /scripts/jd_ddnc_farmpark.js >> /scripts/logs/jd_ddnc_farmpark.log 2>&1
@@ -75,7 +75,7 @@
 39 13 * * *  node /scripts/jd_dygetbeans.js >> /scripts/logs/jd_dygetbeans.log 2>&1
 
 #天天签到礼享金 入口：app首页-家电家居-底部签到
-38 13 * * *  node /scripts/jd_ttqdlxj.js >> /scripts/logs/jd_ttqdlxj.log 2>&1
+#38 13 * * *  node /scripts/jd_ttqdlxj.js >> /scripts/logs/jd_ttqdlxj.log 2>&1
 
 
 #京喜特价金币
@@ -103,7 +103,7 @@
 10 7,21 * * *  node /scripts/jd_wwpark_task.js >> /scripts/logs/jd_wwpark_task.log 2>&1
 
 #10.28-11.12 签到瓜分京豆
-12 8,18 * * *  node /scripts/jd_dlgf.js >> /scripts/logs/jd_dlgf.log 2>&1
+#12 8,18 * * *  node /scripts/jd_dlgf.js >> /scripts/logs/jd_dlgf.log 2>&1
 
 #新农场任务
 18 9,19 * * *  node /scripts/jd_fruit_new.js >> /scripts/logs/jd_fruit_new.log 2>&1
@@ -117,10 +117,10 @@
 
 
 #双十一红包
-3 0,10,20 * * *  node /scripts/gua_231111_Red.js >> /scripts/logs/gua_231111_Red.log 2>&1
+#3 0,10,20 * * *  node /scripts/gua_231111_Red.js >> /scripts/logs/gua_231111_Red.log 2>&1
 
 #全民大乐透抽奖
-42 0,16  * * *  node /scripts/jd_qmLottery.js >> /scripts/logs/jd_qmLottery.log 2>&1
+#42 0,16  * * *  node /scripts/jd_qmLottery.js >> /scripts/logs/jd_qmLottery.log 2>&1
 
 
 #秒杀浏览商品领豆
