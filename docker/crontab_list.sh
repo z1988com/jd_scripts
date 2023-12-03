@@ -127,6 +127,10 @@
 12 8,15  * * *  node /scripts/jd_seckillViewTask.js >> /scripts/logs/jd_seckillViewTask.log 2>&1
 
 
+#天天领红包
+10 1,16  * * *  node /scripts/jd_ttlhb.js >> /scripts/logs/jd_ttlhb.log 2>&1
+
+
 ##############值得买##############
 
 #10 0 * * * * node /scripts/smzdm_mission.js >> /scripts/logs/smzdm_mission.log 2>&1
