@@ -131,6 +131,16 @@
 10 1,16  * * *  node /scripts/jd_ttlhb.js >> /scripts/logs/jd_ttlhb.log 2>&1
 
 
+
+#活动名称：京东跨年狂欢助力20红包
+10 3, 15 * * *  node /scripts/jd_newYear_party_invite.js >> /scripts/logs/jd_newYear_party_invite.log 2>&1
+
+
+
+#京东跨年狂欢抽奖
+16 4,16  * * *  node /scripts/jd_newYear_party.js >> /scripts/logs/jd_newYear_party.log 2>&1
+
+
 ##############值得买##############
 
 #10 0 * * * * node /scripts/smzdm_mission.js >> /scripts/logs/smzdm_mission.log 2>&1
