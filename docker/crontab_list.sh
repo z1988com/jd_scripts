@@ -141,7 +141,10 @@
 16 4,16  * * *  node /scripts/jd_newYear_party.js >> /scripts/logs/jd_newYear_party.log 2>&1
 
 #金融签到，领取双签礼包
-36 6,18  * * *  node /scripts/jd_jrsign.js >> /scripts/logs/jd_jrsign.log 2>&1
+#36 6,18  * * *  node /scripts/jd_jrsign.js >> /scripts/logs/jd_jrsign.log 2>&1
+
+#接龙车抢888元超市卡
+36 7,17  * * *  node /scripts/jd_jlong.js >> /scripts/logs/jd_jlong.log 2>&1
 
 
 ##############值得买##############
