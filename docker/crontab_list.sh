@@ -133,7 +133,7 @@
 
 
 #活动名称：京东跨年狂欢助力20红包
-10 3, 15 * * *  node /scripts/jd_newYear_party_invite.js >> /scripts/logs/jd_newYear_party_invite.log 2>&1
+#10 3, 15 * * *  node /scripts/jd_newYear_party_invite.js >> /scripts/logs/jd_newYear_party_invite.log 2>&1
 
 
 
@@ -144,7 +144,7 @@
 #36 6,18  * * *  node /scripts/jd_jrsign.js >> /scripts/logs/jd_jrsign.log 2>&1
 
 #接龙车抢888元超市卡
-36 7,17  * * *  node /scripts/jd_jlong.js >> /scripts/logs/jd_jlong.log 2>&1
+#36 7,17  * * *  node /scripts/jd_jlong.js >> /scripts/logs/jd_jlong.log 2>&1
 
 
 ##############值得买##############
