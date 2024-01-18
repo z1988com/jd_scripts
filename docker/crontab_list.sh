@@ -152,7 +152,7 @@
 40 1,17  * * *  node /scripts/jd_znshb_draw.js >> /scripts/logs/jd_znshb_draw.log 2>&1
 
 #炸年兽红包雨
-0 20 * * *  node /scripts/jd_znshby.js >> /scripts/logs/jd_znshby.log 2>&1
+0,20 20 * * *  node /scripts/jd_znshby.js >> /scripts/logs/jd_znshby.log 2>&1
 
 
 
