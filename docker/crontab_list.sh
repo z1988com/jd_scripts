@@ -145,6 +145,17 @@
 #每次领取红包次数
 19 0,18  * * *  node /scripts/jd_nhjred.js >> /scripts/logs/jd_nhjred.log 2>&1
 
+#炸年兽抽红包_助力
+19 1,16  * * *  node /scripts/jd_znshb_help.js >> /scripts/logs/jd_znshb_help.log 2>&1
+
+#炸年兽抽红包_抽奖提现
+40 1,17  * * *  node /scripts/jd_znshb_draw.js >> /scripts/logs/jd_znshb_draw.log 2>&1
+
+#炸年兽红包雨
+0 20 * * *  node /scripts/jd_znshby.js >> /scripts/logs/jd_znshby.log 2>&1
+
+
+
 #金融签到，领取双签礼包
 #36 6,18  * * *  node /scripts/jd_jrsign.js >> /scripts/logs/jd_jrsign.log 2>&1
 
