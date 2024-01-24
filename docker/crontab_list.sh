@@ -161,6 +161,8 @@
 #炸年兽红包雨
 0,20 20 * * *  node /scripts/jd_znshby.js >> /scripts/logs/jd_znshby.log 2>&1
 
+#集龙运抽好礼
+32 6,21 * * *  node /scripts/jd_jlychl.js >> /scripts/logs/jd_jlychl.log 2>&1
 
 
 #金融签到，领取双签礼包
