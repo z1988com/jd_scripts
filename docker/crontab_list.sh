@@ -84,6 +84,10 @@
 #京喜特价金币
 05 13,19 * * *  node /scripts/jd_speed_sign2.js >> /scripts/logs/jd_speed_sign2.log 2>&1
 
+#特价版签到提现
+36 11,21 * * *  node /scripts/jd_tj_signcash.js >> /scripts/logs/jd_tj_signcash.log 2>&1
+
+
 #极速模式签到
 08 12,17 * * *  node /scripts/jd_speedtx.js >> /scripts/logs/jd_speedtx.log 2>&1
 
