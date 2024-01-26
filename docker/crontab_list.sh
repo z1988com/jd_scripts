@@ -171,6 +171,11 @@
 #接龙车抢888元超市卡
 #36 7,17  * * *  node /scripts/jd_jlong.js >> /scripts/logs/jd_jlong.log 2>&1
 
+#东东健康社区
+47 0,6,22 * * *  node /scripts/jd_health.js >> /scripts/logs/jd_health.log 2>&1
+
+#东东健康社区收集能量收集
+5-45/20 0-4 * * *  node /scripts/jd_health_collect.js >> /scripts/logs/jd_health_collect.log 2>&1
 
 ##############值得买##############
 
