@@ -177,6 +177,10 @@
 #东东健康社区收集能量收集
 5-45/20 0-4 * * *  node /scripts/jd_health_collect.js >> /scripts/logs/jd_health_collect.log 2>&1
 
+#超市红包雨
+6,36 20 * * * node /scripts/jd_mkredrain.js >> /scripts/logs/jd_mkredrain.log 2>&1
+
+
 ##############值得买##############
 
 #10 0 * * * * node /scripts/smzdm_mission.js >> /scripts/logs/smzdm_mission.log 2>&1
