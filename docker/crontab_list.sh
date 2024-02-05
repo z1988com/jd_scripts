@@ -147,8 +147,6 @@
 #京东跨年狂欢抽奖
 16 4,16  * * *  node /scripts/jd_newYear_party.js >> /scripts/logs/jd_newYear_party.log 2>&1
 
-
-
 #每次领取红包次数
 19 0,18  * * *  node /scripts/jd_nhjred.js >> /scripts/logs/jd_nhjred.log 2>&1
 
@@ -180,6 +178,9 @@
 #超市红包雨
 6,36 20 * * * node /scripts/jd_mkredrain.js >> /scripts/logs/jd_mkredrain.log 2>&1
 
+
+#新春红包_助力
+6 0,12 * * * node /scripts/jd_xchb_help.js >> /scripts/logs/jd_xchb_help.log 2>&1
 
 ##############值得买##############
 
