@@ -181,7 +181,7 @@
 
 #新春红包_助力
 6 0,12 * * * node /scripts/jd_xchb_help.js >> /scripts/logs/jd_xchb_help.log 2>&1
-
+ 
 ##############值得买##############
 
 #10 0 * * * * node /scripts/smzdm_mission.js >> /scripts/logs/smzdm_mission.log 2>&1
