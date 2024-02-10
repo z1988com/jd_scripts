@@ -16,7 +16,9 @@ else
   git reset --hard
   echo "git pull拉取最新代码..."
   git -C /scripts pull --rebase
-  
+
+  npm config get registry
+
   echo "npm 清空缓存..."
   npm cache clean --force
   echo "npm 切换新源..."
