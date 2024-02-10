@@ -18,7 +18,8 @@ else
   git -C /scripts pull --rebase
   #清空缓存
   npm cache clean --force
-  #//切换新源
+  echo "清空npm缓存 ..."
+  echo "切换新源"
   npm config set registry https://registry.npmmirror.com
   echo "npm install 安装最新依赖"
   npm install --prefix /scripts
