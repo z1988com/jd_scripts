@@ -16,11 +16,12 @@ else
   git reset --hard
   echo "git pull拉取最新代码..."
   git -C /scripts pull --rebase
-  #清空缓存
+  
+  echo "npm 清空缓存..."
   npm cache clean --force
-  echo "清空npm缓存 ..."
-  echo "切换新源"
+  echo "npm 切换新源..."
   npm config set registry https://registry.npmmirror.com
+  
   echo "npm install 安装最新依赖"
   npm install --prefix /scripts
 fi
