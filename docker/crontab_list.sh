@@ -148,7 +148,7 @@
 16 4,16  * * *  node /scripts/jd_newYear_party.js >> /scripts/logs/jd_newYear_party.log 2>&1
 
 #每次领取红包次数
-19 0,18  * * *  node /scripts/jd_nhjred.js >> /scripts/logs/jd_nhjred.log 2>&1
+#19 0,18  * * *  node /scripts/jd_nhjred.js >> /scripts/logs/jd_nhjred.log 2>&1
 
 #炸年兽抽红包_助力
 19 1,16  * * *  node /scripts/jd_znshb_help.js >> /scripts/logs/jd_znshb_help.log 2>&1
