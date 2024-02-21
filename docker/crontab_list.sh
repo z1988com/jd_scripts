@@ -181,6 +181,9 @@
 
 #新春红包_助力
 6 2,12 * * * node /scripts/jd_xchb_help.js >> /scripts/logs/jd_xchb_help.log 2>&1
+
+#京豆国际
+13 0,12 * * * node /scripts/jd_ddgj.js >> /scripts/logs/jd_ddgj.log 2>&1
  
 ##############值得买##############
 
