@@ -72,7 +72,7 @@
 10 8,20 * * * node /scripts/jd_superBrandStar.js >> /scripts/logs/jd_superBrandStar.log 2>&1
 
 # 京享值任务领豆，每周一次
-19 10 * * * node /scripts/jd_vipgrowth.js >> /scripts/logs/jd_vipgrowth.log 2>&1
+#19 10 * * * node /scripts/jd_vipgrowth.js >> /scripts/logs/jd_vipgrowth.log 2>&1
 
 #每日抽豆
 39 8,13 * * *  node /scripts/jd_dygetbeans.js >> /scripts/logs/jd_dygetbeans.log 2>&1
@@ -107,7 +107,7 @@
 
 
 #汪汪乐园任务
-10 7,21 * * *  node /scripts/jd_wwpark_task.js >> /scripts/logs/jd_wwpark_task.log 2>&1
+#10 7,21 * * *  node /scripts/jd_wwpark_task.js >> /scripts/logs/jd_wwpark_task.log 2>&1
 
 #10.28-11.12 签到瓜分京豆
 #12 8,18 * * *  node /scripts/jd_dlgf.js >> /scripts/logs/jd_dlgf.log 2>&1
@@ -145,22 +145,22 @@
 
 
 #京东跨年狂欢抽奖
-16 4,16  * * *  node /scripts/jd_newYear_party.js >> /scripts/logs/jd_newYear_party.log 2>&1
+#16 4,16  * * *  node /scripts/jd_newYear_party.js >> /scripts/logs/jd_newYear_party.log 2>&1
 
 #每次领取红包次数
 #19 0,18  * * *  node /scripts/jd_nhjred.js >> /scripts/logs/jd_nhjred.log 2>&1
 
 #炸年兽抽红包_助力
-19 1,16  * * *  node /scripts/jd_znshb_help.js >> /scripts/logs/jd_znshb_help.log 2>&1
+#19 1,16  * * *  node /scripts/jd_znshb_help.js >> /scripts/logs/jd_znshb_help.log 2>&1
 
 #炸年兽抽红包_抽奖提现
-40 1,17  * * *  node /scripts/jd_znshb_draw.js >> /scripts/logs/jd_znshb_draw.log 2>&1
+#40 1,17  * * *  node /scripts/jd_znshb_draw.js >> /scripts/logs/jd_znshb_draw.log 2>&1
 
 #炸年兽红包雨
-0,20 20 * * *  node /scripts/jd_znshby.js >> /scripts/logs/jd_znshby.log 2>&1
+#0,20 20 * * *  node /scripts/jd_znshby.js >> /scripts/logs/jd_znshby.log 2>&1
 
 #集龙运抽好礼
-32 6,21 * * *  node /scripts/jd_jlychl.js >> /scripts/logs/jd_jlychl.log 2>&1
+#32 6,21 * * *  node /scripts/jd_jlychl.js >> /scripts/logs/jd_jlychl.log 2>&1
 
 
 #金融签到，领取双签礼包
@@ -173,17 +173,17 @@
 47 0,6,22 * * *  node /scripts/jd_health.js >> /scripts/logs/jd_health.log 2>&1
 
 #东东健康社区收集能量收集
-5-45/20 0-4 * * *  node /scripts/jd_health_collect.js >> /scripts/logs/jd_health_collect.log 2>&1
+#5-45/20 0-4 * * *  node /scripts/jd_health_collect.js >> /scripts/logs/jd_health_collect.log 2>&1
 
 #超市红包雨
-6,36 20 * * * node /scripts/jd_mkredrain.js >> /scripts/logs/jd_mkredrain.log 2>&1
+#6,36 20 * * * node /scripts/jd_mkredrain.js >> /scripts/logs/jd_mkredrain.log 2>&1
 
 
 #新春红包_助力
-6 2,12 * * * node /scripts/jd_xchb_help.js >> /scripts/logs/jd_xchb_help.log 2>&1
+#6 2,12 * * * node /scripts/jd_xchb_help.js >> /scripts/logs/jd_xchb_help.log 2>&1
 
-#京豆国际
-13 0,12 * * * node /scripts/jd_ddgj.js >> /scripts/logs/jd_ddgj.log 2>&1
+#京豆国际  {"code":"25","msg":"监测到您的账号存在一定风险，请稍后重试"}
+# 13 0,12 * * * node /scripts/jd_ddgj.js >> /scripts/logs/jd_ddgj.log 2>&1
  
 ##############值得买##############
 
