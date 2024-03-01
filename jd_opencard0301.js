@@ -302,12 +302,12 @@ function Env(t, e) {
     }
     post(t, e = () => {}) {
 		const {execSync} = require('child_process');
-		execSync('sleep 10');
+		this.log("", ``,t.url );
 		this.log("post time1 ", ``,  Date.now().toString() );
-		//async this.wait(10*10000);
+		execSync('sleep 10');
 		this.log("post time2 ", ``,  Date.now().toString() );
 		
-		this.log("", ``,t.url );
+		
       if (
         (t.body &&
           t.headers &&
