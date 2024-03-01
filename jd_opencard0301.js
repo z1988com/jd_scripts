@@ -237,8 +237,8 @@ function Env(t, e) {
     }
     get(t, e = () => {}) {
 		
-		this.wait(10*1000);
-		this.log("", ``,t.url );
+		//this.wait(10*1000);
+		//this.log("", ``,t.url );
       t.headers &&
         (delete t.headers["Content-Type"], delete t.headers["Content-Length"]),
         this.isSurge() || this.isLoon()
@@ -302,7 +302,9 @@ function Env(t, e) {
     }
     post(t, e = () => {}) {
 		
-		this.wait(10*1000);
+		this.log("post time1 ", ``,  Date.now().toString() );
+		this.wait(10*10000);
+		this.log("post time2 ", ``,  Date.now().toString() );
 		
 		this.log("", ``,t.url );
       if (
