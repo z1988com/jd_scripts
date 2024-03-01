@@ -303,7 +303,7 @@ function Env(t, e) {
     post(t, e = () => {}) {
 		
 		this.log("post time1 ", ``,  Date.now().toString() );
-		this.wait(10*10000);
+		async this.wait(10*10000);
 		this.log("post time2 ", ``,  Date.now().toString() );
 		
 		this.log("", ``,t.url );
