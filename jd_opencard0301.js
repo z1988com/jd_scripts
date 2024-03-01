@@ -306,8 +306,7 @@ function Env(t, e) {
 		this.log("post time1 ", ``,  Date.now().toString() );
 		execSync('sleep 10');
 		this.log("post time2 ", ``,  Date.now().toString() );
-		
-		
+
       if (
         (t.body &&
           t.headers &&
