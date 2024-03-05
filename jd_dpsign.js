@@ -66,7 +66,7 @@ function getAuthorShareCode(url) {
       try {
         resolve(JSON.parse(data))
       } catch (e) {
-        // $.logErr(e, resp)
+         $.logErr(e, resp)
       } finally {
         resolve();
       }
