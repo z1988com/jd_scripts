@@ -34,7 +34,7 @@ const md5 = $.isNode() ? require('md5-node'): '';;
 console.log(`${share_code_url}/jd_shop_sign?type=1&username=`)
 
 const res =  getAuthorShareCode(`${share_code_url}/jd_shop_sign?type=1&username=`);
-console.log(`${res}`)
+console.log(`getAuthorShareCode=${JSON.stringify(res)}`)
 if (res && res.code === 200) {
 	token = res.data || [];
 }else{
