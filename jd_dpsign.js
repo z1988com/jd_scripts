@@ -34,6 +34,7 @@ const md5 = $.isNode() ? require('md5-node'): '';;
 console.log(`${share_code_url}/jd_shop_sign?type=1&username=`)
 
 const res =  getAuthorShareCode(`${share_code_url}/jd_shop_sign?type=1&username=`);
+console.log(`${res}`)
 if (res && res.code === 200) {
 	token = res.data || [];
 }else{
@@ -47,7 +48,7 @@ function getAuthorShareCode(url) {
   return new Promise(async resolve => {
     const options = {
       url: `${url}`, "timeout": 10000, headers: {
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/112.0.0.0"
       }
     };
 	
