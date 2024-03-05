@@ -25,10 +25,11 @@ var token = [//内置token
     //"710F970D2C9D83AE4547C6CD97754DCB",
     //"264D069FBD411345AC26F8173FB9ABDB",
 ]
-const share_code_url = process.env.UPDATE_SHARE_CODE_URL ?? '';
-const md5 = $.isNode() ? require('md5-node'): '';;
 
 const $ = new Env('店铺签到');
+
+const share_code_url = process.env.UPDATE_SHARE_CODE_URL ?? '';
+const md5 = $.isNode() ? require('md5-node'): '';;
 
 const res =  getAuthorShareCode(`${share_code_url}/jd_shop_sign?type=1&username=`);
 if (res && res.code === 200) {
