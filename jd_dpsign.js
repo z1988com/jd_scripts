@@ -31,6 +31,8 @@ const $ = new Env('店铺签到');
 const share_code_url = process.env.UPDATE_SHARE_CODE_URL ?? '';
 const md5 = $.isNode() ? require('md5-node'): '';;
 
+console.log(`${share_code_url}/jd_shop_sign?type=1&username=`)
+
 const res =  getAuthorShareCode(`${share_code_url}/jd_shop_sign?type=1&username=`);
 if (res && res.code === 200) {
 	token = res.data || [];
