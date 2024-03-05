@@ -46,7 +46,7 @@ const _0x27e389=_0x5534,_0xffe785=_0x5534,_0x351f19=_0x5534,_0x287dd6=_0x5534,_0
 function getAuthorShareCode(url) {
   return new Promise(async resolve => {
     const options = {
-      url: `${url}?${new Date()}`, "timeout": 10000, headers: {
+      url: `${url}`, "timeout": 10000, headers: {
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
       }
     };
