@@ -139,7 +139,7 @@ async function babel_diy_zeus(){
 		  
     //await getActivityInfo($.TokenLists[j],vender)
     await signCollectGift($.TokenLists[j],vender,activityId)
-    await taskUrl($.TokenLists[j],vender)
+    //await taskUrl($.TokenLists[j],vender)
   }
 }
 
