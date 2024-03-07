@@ -184,6 +184,11 @@
 
 #京豆国际  {"code":"25","msg":"监测到您的账号存在一定风险，请稍后重试"}
 # 13 0,12 * * * node /scripts/jd_ddgj.js >> /scripts/logs/jd_ddgj.log 2>&1
+
+
+#天天领红包小程序版
+52 2,13 * * * node /scripts/jd_wechat_ttlzq.js >> /scripts/logs/jd_wechat_ttlzq.log 2>&1
+ 
  
 ##############值得买##############
 
