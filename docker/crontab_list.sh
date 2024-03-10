@@ -97,7 +97,7 @@
 
 
 #Jd转赚红包
-36 0,8 * * *  node /scripts/jd_zzhb.js >> /scripts/logs/jd_zzhb.log 2>&1
+36 0,8,16 * * *  node /scripts/jd_zzhb.js >> /scripts/logs/jd_zzhb.log 2>&1
 
 #Jd京喜特价抽现金
 46 0,9 * * *  node /scripts/jx_cxjhelp.js >> /scripts/logs/jx_cxjhelp.log 2>&1
