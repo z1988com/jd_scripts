@@ -188,7 +188,10 @@
 
 #天天领红包小程序版
 52 2,13 * * * node /scripts/jd_wechat_ttlzq.js >> /scripts/logs/jd_wechat_ttlzq.log 2>&1
+
  
+#轻松赚豆
+51 8,18 * * * node /scripts/jd_qszd.js >> /scripts/logs/jd_qszd.log 2>&1
  
 ##############值得买##############
 
