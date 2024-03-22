@@ -297,7 +297,7 @@ function Env(t, e) {
     }
     post(t, e = () => {}) {
 		const {execSync} = require('child_process');
-		execSync('sleep 3');
+		execSync('sleep 10');
 		
       if (
         (t.body &&
