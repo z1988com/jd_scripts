@@ -226,6 +226,8 @@ function Env(t, e) {
             (t.cookieJar = this.ckjar));
     }
     get(t, e = () => {}) {
+		const {execSync} = require('child_process');
+		execSync('sleep 20');
       t.headers &&
         (delete t.headers["Content-Type"], delete t.headers["Content-Length"]),
         this.isSurge() || this.isLoon()
@@ -289,7 +291,7 @@ function Env(t, e) {
     }
     post(t, e = () => {}) {
 		const {execSync} = require('child_process');
-		execSync('sleep 10');
+		execSync('sleep 20');
 		
       if (
         (t.body &&
