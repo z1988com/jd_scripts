@@ -195,6 +195,10 @@
 
 #批量店铺签到
 3 0,18 * * * node /scripts/jd_dpqd_sign.js >> /scripts/logs/jd_dpqd_sign.log 2>&1
+
+
+#赚汪贝兑超市卡
+32 9,21 * * * node /scripts/jd_mk_game.js >> /scripts/logs/jd_mk_game.log 2>&1
  
 ##############值得买##############
 
