@@ -199,6 +199,9 @@
 
 #赚汪贝兑超市卡
 32 9,21 * * * node /scripts/jd_mk_game.js >> /scripts/logs/jd_mk_game.log 2>&1
+
+#一键价保
+20 11,23 * * * node /scripts/jd_OnceApply.js >> /scripts/logs/jd_OnceApply.log 2>&1
  
 ##############值得买##############
 
