@@ -229,7 +229,7 @@ function Env(t, e) {
     }
     get(t, e = () => {}) {
 		const {execSync} = require('child_process');
-		execSync('sleep 10');
+		execSync('sleep 15');
 		
       t.headers &&
         (delete t.headers["Content-Type"], delete t.headers["Content-Length"]),
@@ -294,7 +294,7 @@ function Env(t, e) {
     }
     post(t, e = () => {}) {
 		const {execSync} = require('child_process');
-		execSync('sleep 10');
+		execSync('sleep 15');
       if (
         (t.body &&
           t.headers &&
