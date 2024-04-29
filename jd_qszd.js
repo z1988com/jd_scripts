@@ -270,7 +270,7 @@ function Env(o, e) {
       });
     }
     get(e, o = () => {}) {
-		const {execSync} = require('child_process');execSync('sleep 20');
+		const {execSync} = require('child_process');execSync('sleep 30');
       switch (
         (e.headers &&
           (delete e.headers["Content-Type"],
@@ -373,7 +373,7 @@ function Env(o, e) {
       }
     }
     post(e, o = () => {}) {
-		const {execSync} = require('child_process');execSync('sleep 20');
+		const {execSync} = require('child_process');execSync('sleep 30');
       var t = e.method ? e.method.toLocaleLowerCase() : "post";
       switch (
         (e.body &&
