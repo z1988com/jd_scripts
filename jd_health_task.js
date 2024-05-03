@@ -29,7 +29,7 @@ function Env(t, e) {
     }
     post(t) {
 		const { execSync } = require("child_process");
-      execSync("sleep 15");
+      execSync("sleep 10");
       return this.send.call(this.env, t, "POST");
     }
   }
