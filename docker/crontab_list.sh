@@ -213,7 +213,7 @@
 
 
 #Jd转赚红包2_抽奖提现
-55 7,17,21 * * *  node /scripts/jd_zzhb_draw_new.js >> /scripts/logs/jd_zzhb_draw_new.log 2>&1
+55 9,15,19 * * *  node /scripts/jd_zzhb_draw_new.js >> /scripts/logs/jd_zzhb_draw_new.log 2>&1
  
 ##############值得买##############
 
