@@ -96,8 +96,7 @@
 38 10,19 * * *  node /scripts/jd_yqs.js >> /scripts/logs/jd_yqs.log 2>&1
 
 
-#Jd转赚红包
-36 */2 * * *  node /scripts/jd_zzhb.js >> /scripts/logs/jd_zzhb.log 2>&1
+
 
 #Jd京喜特价抽现金
 46 0,9 * * *  node /scripts/jx_cxjhelp.js >> /scripts/logs/jx_cxjhelp.log 2>&1
@@ -202,6 +201,19 @@
 
 #一键价保
 20 11,23 * * * node /scripts/jd_OnceApply.js >> /scripts/logs/jd_OnceApply.log 2>&1
+ 
+#Jd转赚红包
+5 */2 * * *  node /scripts/jd_zzhb.js >> /scripts/logs/jd_zzhb.log 2>&1
+
+#Jd转赚红包_抽奖提现
+55 7,17,21 * * *  node /scripts/jd_zzhb_draw.js >> /scripts/logs/jd_zzhb_draw.log 2>&1
+
+#Jd转赚红包2
+36 */2 * * *  node /scripts/jd_zzhb_new.js >> /scripts/logs/jd_zzhb_new.log 2>&1
+
+
+#Jd转赚红包2_抽奖提现
+55 7,17,21 * * *  node /scripts/jd_zzhb_draw_new.js >> /scripts/logs/jd_zzhb_draw_new.log 2>&1
  
 ##############值得买##############
 
