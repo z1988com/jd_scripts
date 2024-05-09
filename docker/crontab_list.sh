@@ -39,7 +39,7 @@
 47 1 * * * node /scripts/jd_kd.js >> /scripts/logs/jd_kd.log 2>&1
 
 # 导到所有互助码
-23 7 * * * node /scripts/jd_get_share_code.js >> /scripts/logs/jd_get_share_code.log 2>&1
+# 23 7 * * * node /scripts/jd_get_share_code.js >> /scripts/logs/jd_get_share_code.log 2>&1
 
 # 签到领现金
 #53 */4 * * * node /scripts/jd_cash.js >> /scripts/logs/jd_cash.log 2>&1
@@ -81,15 +81,15 @@
 #38 13 * * *  node /scripts/jd_ttqdlxj.js >> /scripts/logs/jd_ttqdlxj.log 2>&1
 
 
-#京喜特价金币
-05 13,19 * * *  node /scripts/jd_speed_sign2.js >> /scripts/logs/jd_speed_sign2.log 2>&1
+#京喜特价金币 已下架（2024-05-07）
+#05 13,19 * * *  node /scripts/jd_speed_sign2.js >> /scripts/logs/jd_speed_sign2.log 2>&1
 
 #特价版签到提现
 36 11,21 * * *  node /scripts/jd_tj_signcash.js >> /scripts/logs/jd_tj_signcash.log 2>&1
 
 
-#极速模式签到
-08 12,17 * * *  node /scripts/jd_speedtx.js >> /scripts/logs/jd_speedtx.log 2>&1
+#极速模式签到 失效
+#08 12,17 * * *  node /scripts/jd_speedtx.js >> /scripts/logs/jd_speedtx.log 2>&1
 
 
 #摇钱树任务 等级达到40级为满级，需要停止浇水3天，7天后开启新一轮活动
@@ -133,7 +133,7 @@
 12 8,15  * * *  node /scripts/jd_seckillViewTask.js >> /scripts/logs/jd_seckillViewTask.log 2>&1
 
 
-#天天领红包
+#天天领红包 失效20240509
 10 1,16  * * *  node /scripts/jd_ttlhb.js >> /scripts/logs/jd_ttlhb.log 2>&1
 
 
