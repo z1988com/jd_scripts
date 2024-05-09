@@ -102,7 +102,7 @@
 46 0,9 * * *  node /scripts/jx_cxjhelp.js >> /scripts/logs/jx_cxjhelp.log 2>&1
 
 #Jd每日红包
-23 6,16 * * *  node /scripts/jd_mrhb.js >> /scripts/logs/jd_mrhb.log 2>&1
+#23 6,16 * * *  node /scripts/jd_mrhb.js >> /scripts/logs/jd_mrhb.log 2>&1
 
 
 #汪汪乐园任务
