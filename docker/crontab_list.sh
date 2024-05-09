@@ -231,6 +231,10 @@
 
 #金融签到，领取双签礼包
 53 6,18  * * *  node /scripts/jd_jrsign.js >> /scripts/logs/jd_jrsign.log 2>&1
+
+
+#欢乐淘金（发财挖宝）助力  入口：京东APP——玩一玩——欢乐淘金
+05 1,13,21  * * *  node /scripts/jd_fcwb_help.js >> /scripts/logs/jd_fcwb_help.log 2>&1
  
 ############## 值得买 ##############
 
