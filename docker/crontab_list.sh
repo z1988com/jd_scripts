@@ -214,8 +214,14 @@
 
 #Jd转赚红包2_抽奖提现
 55 9,15,19 * * *  node /scripts/jd_zzhb_draw_new.js >> /scripts/logs/jd_zzhb_draw_new.log 2>&1
+
+
+############## 金融 ##############
+
+# APP首页-领京豆 金融双签领取
+52 9,21 * * *  node /scripts/jd_signbeanact.js >> /scripts/logs/jd_signbeanact.log 2>&1
  
-##############值得买##############
+############## 值得买 ##############
 
 #签到
 1 7,19 * * * * node /scripts/smzdm_checkin.js >> /scripts/logs/smzdm_checkin.log 2>&1
