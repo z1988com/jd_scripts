@@ -162,8 +162,7 @@
 #32 6,21 * * *  node /scripts/jd_jlychl.js >> /scripts/logs/jd_jlychl.log 2>&1
 
 
-#金融签到，领取双签礼包
-#36 6,18  * * *  node /scripts/jd_jrsign.js >> /scripts/logs/jd_jrsign.log 2>&1
+
 
 #接龙车抢888元超市卡
 #36 7,17  * * *  node /scripts/jd_jlong.js >> /scripts/logs/jd_jlong.log 2>&1
@@ -199,6 +198,10 @@
 #赚汪贝兑超市卡
 32 9,21 * * * node /scripts/jd_mk_game.js >> /scripts/logs/jd_mk_game.log 2>&1
 
+#做任务赚汪贝
+10 11,19 * * * node /scripts/jd_zwb.js >> /scripts/logs/jd_zwb.log 2>&1
+
+
 #一键价保
 20 11,23 * * * node /scripts/jd_OnceApply.js >> /scripts/logs/jd_OnceApply.log 2>&1
  
@@ -216,10 +219,18 @@
 55 9,15,19 * * *  node /scripts/jd_zzhb_draw_new.js >> /scripts/logs/jd_zzhb_draw_new.log 2>&1
 
 
+
+#服装抽奖 抽奖都空气 停用20240519
+#32 7,15 * * *  node /scripts/jd_clothing_draw.js >> /scripts/logs/jd_clothing_draw.log 2>&1
+
+
 ############## 金融 ##############
 
 # APP首页-领京豆 金融双签领取
-52 9,21 * * *  node /scripts/jd_signbeanact.js >> /scripts/logs/jd_signbeanact.log 2>&1
+#52 9,21 * * *  node /scripts/jd_signbeanact.js >> /scripts/logs/jd_signbeanact.log 2>&1
+
+#金融签到，领取双签礼包
+53 6,18  * * *  node /scripts/jd_jrsign.js >> /scripts/logs/jd_jrsign.log 2>&1
  
 ############## 值得买 ##############
 
