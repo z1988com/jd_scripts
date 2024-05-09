@@ -231,6 +231,13 @@
 
 #全民众测能量值任务
 46 11,23 * * * * node /scripts/smzdm_testing.js >> /scripts/logs/smzdm_testing.log 2>&1
+
+############## 顺丰 ##############
+
+11 6,18 * * * node /scripts/sfsyV2.js >> /scripts/logs/sfsyV2.log 2>&1
+
+
 ############## 联通 ##############
 
 #10 10,18 * * * node /scripts/unicom_day_sign.js >> /scripts/logs/unicom_day_sign.log 2>&1
+
