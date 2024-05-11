@@ -249,19 +249,19 @@
 ############## 值得买 ##############
 
 #签到
-1 7,19 * * * * node /scripts/smzdm_checkin.js >> /scripts/logs/smzdm_checkin.log 2>&1
+1 7,19 * * * node /scripts/smzdm_checkin.js >> /scripts/logs/smzdm_checkin.log 2>&1
 
 #抽奖脚本
-12 10,20 * * * * node /scripts/smzdm_lottery.js >> /scripts/logs/smzdm_lottery.log 2>&1
+12 10,20 * * * node /scripts/smzdm_lottery.js >> /scripts/logs/smzdm_lottery.log 2>&1
 
 #每日任务
-36 8,19,22 * * * * node /scripts/smzdm_task.js >> /scripts/logs/smzdm_task.log 2>&1
+36 8,19,22 * * * node /scripts/smzdm_task.js >> /scripts/logs/smzdm_task.log 2>&1
 
 #抽奖
-16 9,21 * * * * node /scripts/smzdm_lottery.js >> /scripts/logs/smzdm_lottery.log 2>&1
+16 9,21 * * * node /scripts/smzdm_lottery.js >> /scripts/logs/smzdm_lottery.log 2>&1
 
 #全民众测能量值任务
-46 11,23 * * * * node /scripts/smzdm_testing.js >> /scripts/logs/smzdm_testing.log 2>&1
+46 11,23 * * * node /scripts/smzdm_testing.js >> /scripts/logs/smzdm_testing.log 2>&1
 
 ############## 顺丰 ##############
 
