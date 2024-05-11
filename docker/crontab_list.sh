@@ -71,6 +71,9 @@
 #特务之明星送好礼
 10 8,20 * * * node /scripts/jd_superBrandStar.js >> /scripts/logs/jd_superBrandStar.log 2>&1
 
+#特务之明星送好礼
+10 7,13,,21 * * * node /scripts/jd_superBrandStar_.js >> /scripts/logs/jd_superBrandStar_.log 2>&1
+
 # 京享值任务领豆，每周一次
 #19 10 * * * node /scripts/jd_vipgrowth.js >> /scripts/logs/jd_vipgrowth.log 2>&1
 
