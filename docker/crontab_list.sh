@@ -191,8 +191,8 @@
 52 2,13 * * * node /scripts/jd_wechat_ttlzq.js >> /scripts/logs/jd_wechat_ttlzq.log 2>&1
 
  
-#轻松赚豆
-51 8,18 * * * node /scripts/jd_qszd.js >> /scripts/logs/jd_qszd.log 2>&1
+#轻松赚豆 403
+#51 8,18 * * * node /scripts/jd_qszd.js >> /scripts/logs/jd_qszd.log 2>&1
 
 #批量店铺签到
 3 0,18 * * * node /scripts/jd_dpqd_sign.js >> /scripts/logs/jd_dpqd_sign.log 2>&1
