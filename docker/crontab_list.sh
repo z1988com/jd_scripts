@@ -211,6 +211,9 @@
 #Jd转赚红包
 5 0-23/2 * * * cd /scripts && node jd_zzhb.js >> /scripts/logs/jd_zzhb.log 2>&1
 
+42 * * * * cd /scripts && node jd_zzhb.js >> /scripts/logs/jd_zzhb.log 2>&1
+
+
 #Jd转赚红包_抽奖提现
 55 7,17,21 * * *  cd /scripts && node jd_zzhb_draw.js >> /scripts/logs/jd_zzhb_draw.log 2>&1
 
