@@ -85,10 +85,10 @@
 
 
 #京喜特价金币 已下架（2024-05-07）
-#05 13,19 * * *  node /scripts/jd_speed_sign2.js >> /scripts/logs/jd_speed_sign2.log 2>&1
+05 13,19 * * *  cd /scripts && node jd_speed_sign2.js >> /scripts/logs/jd_speed_sign2.log 2>&1
 
 #特价版签到提现
-36 11,21 * * *  node /scripts/jd_tj_signcash.js >> /scripts/logs/jd_tj_signcash.log 2>&1
+36 11,21 * * *  cd /scripts && node jd_tj_signcash.js >> /scripts/logs/jd_tj_signcash.log 2>&1
 
 
 #极速模式签到 失效
@@ -211,9 +211,6 @@
 #Jd转赚红包
 5 0-23/2 * * * cd /scripts && node jd_zzhb.js >> /scripts/logs/jd_zzhb.log 2>&1
 
-42 * * * * cd /scripts && node jd_zzhb.js >> /scripts/logs/jd_zzhb.log 2>&1
-
-
 #Jd转赚红包_抽奖提现
 55 7,17,21 * * *  cd /scripts && node jd_zzhb_draw.js >> /scripts/logs/jd_zzhb_draw.log 2>&1
 
@@ -261,7 +258,7 @@
 12 10,20 * * * node /scripts/smzdm_lottery.js >> /scripts/logs/smzdm_lottery.log 2>&1
 
 #每日任务
-36 8,19,22 * * * node /scripts/smzdm_task.js >> /scripts/logs/smzdm_task.log 2>&1
+36 8,13,19,22 * * * node /scripts/smzdm_task.js >> /scripts/logs/smzdm_task.log 2>&1
 
 #抽奖
 16 9,21 * * * node /scripts/smzdm_lottery.js >> /scripts/logs/smzdm_lottery.log 2>&1
