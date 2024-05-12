@@ -209,17 +209,17 @@
 20 11,23 * * * node /scripts/jd_OnceApply.js >> /scripts/logs/jd_OnceApply.log 2>&1
  
 #Jd转赚红包
-5 0-23/2 * * *  node /scripts/jd_zzhb.js >> /scripts/logs/jd_zzhb.log 2>&1
+5 0-23/2 * * * cd /scripts && node jd_zzhb.js >> /scripts/logs/jd_zzhb.log 2>&1
 
 #Jd转赚红包_抽奖提现
-55 7,17,21 * * *  node /scripts/jd_zzhb_draw.js >> /scripts/logs/jd_zzhb_draw.log 2>&1
+55 7,17,21 * * *  cd /scripts && node jd_zzhb_draw.js >> /scripts/logs/jd_zzhb_draw.log 2>&1
 
 #Jd转赚红包2
-36 0-23/2 * * *  node /scripts/jd_zzhb_new.js >> /scripts/logs/jd_zzhb_new.log 2>&1
+36 0-23/2 * * *  cd /scripts && node jd_zzhb_new.js >> /scripts/logs/jd_zzhb_new.log 2>&1
 
 
 #Jd转赚红包2_抽奖提现
-55 9,15,19 * * *  node /scripts/jd_zzhb_draw_new.js >> /scripts/logs/jd_zzhb_draw_new.log 2>&1
+55 9,15,19 * * *  cd /scripts && node jd_zzhb_draw_new.js >> /scripts/logs/jd_zzhb_draw_new.log 2>&1
 
 
 
