@@ -222,6 +222,15 @@
 55 9,15,19 * * *  cd /scripts && node jd_zzhb_draw_new.js >> /scripts/logs/jd_zzhb_draw_new.log 2>&1
 
 
+#Jd邀好友抽大奖_助力
+6 0-23/3 * * *  cd /scripts && node jd_cdj_help.js >> /scripts/logs/jd_cdj_help.log 2>&1
+#Jd邀好友抽大奖_抽奖
+41 0-23/3 * * *  cd /scripts && node jd_cdj_draw.js >> /scripts/logs/jd_cdj_draw.log 2>&1
+
+#Jd邀好友抽大奖2_助力
+26 0-23/3 * * *  cd /scripts && node jd_cdj2_help.js >> /scripts/logs/jd_cdj2_help.log 2>&1
+#Jd邀好友抽大奖2_抽奖
+51 0-23/3 * * *  cd /scripts && node jd_cdj2_draw.js >> /scripts/logs/jd_cdj2_draw.log 2>&1
 
 #服装抽奖 抽奖都空气 停用20240519
 #32 7,15 * * *  node /scripts/jd_clothing_draw.js >> /scripts/logs/jd_clothing_draw.log 2>&1
@@ -246,6 +255,8 @@
 05 2,11,19  * * *  node /scripts/jx_fcwb_help.js >> /scripts/logs/jx_fcwb_help.log 2>&1
 #京喜 欢乐淘金（发财挖宝）
 01 3,13,21  * * *  node /scripts/jx_fcwb_auto.js >> /scripts/logs/jx_fcwb_auto.log 2>&1
+
+
 
 
 
