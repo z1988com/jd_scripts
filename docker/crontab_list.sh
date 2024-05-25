@@ -133,8 +133,10 @@
 
 
 #秒杀浏览商品领豆
-12 8,15  * * *  node /scripts/jd_seckillViewTask.js >> /scripts/logs/jd_seckillViewTask.log 2>&1
+12 8,15 * * *  node /scripts/jd_seckillViewTask.js >> /scripts/logs/jd_seckillViewTask.log 2>&1
 
+#秒杀 签到
+57 1,19 * * *  node /scripts/jd_signbeanact_.js >> /scripts/logs/jd_signbeanact_.log 2>&1
 
 #天天领红包 失效20240509
 10 1,16  * * *  node /scripts/jd_ttlhb.js >> /scripts/logs/jd_ttlhb.log 2>&1
