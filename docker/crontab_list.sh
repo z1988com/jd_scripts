@@ -281,7 +281,7 @@
 
 ############## 顺丰 ##############
 
-11 6,18 * * * node /scripts/sfsyV2.js >> /scripts/logs/sfsyV2.log 2>&1
+11 6,18 * * * node /scripts/sfsy.js >> /scripts/logs/sfsy.log 2>&1
 
 
 ############## 联通 ##############
