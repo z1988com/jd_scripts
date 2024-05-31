@@ -258,7 +258,12 @@
 #京喜 欢乐淘金（发财挖宝）
 01 3,13,21  * * *  node /scripts/jx_fcwb_auto.js >> /scripts/logs/jx_fcwb_auto.log 2>&1
 
+#服装抽奖
+36 5,19 * * *  node /scripts/jd_clothing_draw.js >> /scripts/logs/jd_clothing_draw.log 2>&1
 
+
+#618红包
+31 0,17 * * *  node /scripts/jd_618redp.js >> /scripts/logs/jd_618redp.log 2>&1
 
 
 
