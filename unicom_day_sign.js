@@ -45,22 +45,22 @@ if ($.isNode()) {
 	  
 	  //签到
 	  await signinDaySign();
-	  await $.wait(1000 * 10);
+	  await $.wait(1000 * 15);
 	  //积分
 	  await getIntegral();
-	  await $.wait(1000 * 10);
+	  await $.wait(1000 * 15);
 	  //红包
 	  await getConvertTelephone();
-	  await $.wait(1000 * 10);
+	  await $.wait(1000 * 15);
 	  //签到天数
 	  await signinGetContinuous();
-	  await $.wait(5000 * 10);
+	  await $.wait(5000 * 15);
       //await signinGetContinuous();
 	  //await showMsg()
       //if(i  <1 ) {await showMsg()}
 	  if(  i <  cookiesArr.length -1 ){
 		console.log(`休息120秒`)
-		await $.wait(1000 * 120);   
+		await $.wait(1000 * 60*2);   
 	  }
 	   
     }
