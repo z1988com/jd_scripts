@@ -265,6 +265,14 @@
 #618红包
 31 0,17 * * *  node /scripts/jd_618redp.js >> /scripts/logs/jd_618redp.log 2>&1
 
+#新版玩一玩
+# 1.活动时间：2024年5月17日 12:00:00—2024年8月31日23:59:59
+# 2.活动入口： APP我的——更多游戏——玩一玩
+41 3,19 * * *  node /scripts/jd_wanyiwan.js >> /scripts/logs/jd_wanyiwan.log 2>&1
+#玩一玩竞猜
+51 4,20 * * *  node /scripts/jd_wyw_cai.js >> /scripts/logs/jd_wyw_cai.log 2>&1
+
+
 
 
 ############## 值得买 ##############
