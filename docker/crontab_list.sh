@@ -284,7 +284,14 @@
 #天天抽50超市卡
 21 1,19 * * *  cd /scripts && node jd_MktV50.js >> /scripts/logs/jd_MktV50.log 2>&1
 
+#玩一玩的摇一摇
+30 19 * * *  cd /scripts && node jd_yaoyao.js >> /scripts/logs/jd_yaoyao.log 2>&1
 
+#小范大人V你618
+01 3,20 * * *  cd /scripts && node jd_fanV618.js >> /scripts/logs/jd_fanV618.log 2>&1
+
+#小范大人V你50
+53 3,20 * * *  cd /scripts && node jd_fanV50.js >> /scripts/logs/jd_fanV50.log 2>&1
 
 ############## 值得买 ##############
 
