@@ -272,12 +272,19 @@
 #玩一玩竞猜
 51 4,20 * * *  node /scripts/jd_wyw_cai.js >> /scripts/logs/jd_wyw_cai.log 2>&1
 
+#玩一玩-翻翻乐
+45 0-23/3 * * *  node /scripts/jd_wyw_ffl.js >> /scripts/logs/jd_wyw_ffl.log 2>&1
 
 #618开心夜-助力
 6 0,7,18 * * *  cd /scripts && node jd_618kxy_help.js >> /scripts/logs/jd_618kxy_help.log 2>&1
 
 #618开心夜-抽奖
 41 1,8,19 * * *  cd /scripts && node jd_618kxy_draw.js >> /scripts/logs/jd_618kxy_draw.log 2>&1
+
+#天天抽50超市卡
+21 1,19 * * *  cd /scripts && node jd_MktV50.js >> /scripts/logs/jd_MktV50.log 2>&1
+
+
 
 ############## 值得买 ##############
 
