@@ -263,7 +263,7 @@
 
 
 #618红包
-31 0,17 * * *  node /scripts/jd_618redp.js >> /scripts/logs/jd_618redp.log 2>&1
+#31 0,17 * * *  node /scripts/jd_618redp.js >> /scripts/logs/jd_618redp.log 2>&1
 
 #新版玩一玩
 # 1.活动时间：2024年5月17日 12:00:00—2024年8月31日23:59:59
@@ -276,13 +276,13 @@
 45 0-23/3 * * *  node /scripts/jd_wyw_ffl.js >> /scripts/logs/jd_wyw_ffl.log 2>&1
 
 #618开心夜任务
-30 0,7,18 * * *  cd /scripts && node jd_618kxy_task.js >> /scripts/logs/jd_618kxy_task.log 2>&1
+#30 0,7,18 * * *  cd /scripts && node jd_618kxy_task.js >> /scripts/logs/jd_618kxy_task.log 2>&1
 
 #618开心夜-助力
-6 0,7,18 * * *  cd /scripts && node jd_618kxy_help.js >> /scripts/logs/jd_618kxy_help.log 2>&1
+#6 0,7,18 * * *  cd /scripts && node jd_618kxy_help.js >> /scripts/logs/jd_618kxy_help.log 2>&1
 
 #618开心夜-抽奖
-41 1,8,19 * * *  cd /scripts && node jd_618kxy_draw.js >> /scripts/logs/jd_618kxy_draw.log 2>&1
+#41 1,8,19 * * *  cd /scripts && node jd_618kxy_draw.js >> /scripts/logs/jd_618kxy_draw.log 2>&1
 
 #天天抽50超市卡
 21 1,19 * * *  cd /scripts && node jd_MktV50.js >> /scripts/logs/jd_MktV50.log 2>&1
@@ -295,6 +295,8 @@
 
 #小范大人V你50
 53 3,20 * * *  cd /scripts && node jd_fanV50.js >> /scripts/logs/jd_fanV50.log 2>&1
+
+
 
 ############## 值得买 ##############
 
