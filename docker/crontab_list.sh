@@ -12,7 +12,7 @@
 # 签到 
 #13 7 * * * cd /scripts && node jd_sign_graphics.js >> /scripts/logs/jd_sign_graphics.log 2>&1
 
-50 0,16 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
+#50 0,16 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
 
 # 东东农场
 43 6-18/6 * * * node /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
@@ -285,16 +285,21 @@
 #41 1,8,19 * * *  cd /scripts && node jd_618kxy_draw.js >> /scripts/logs/jd_618kxy_draw.log 2>&1
 
 #天天抽50超市卡
-21 1,19 * * *  cd /scripts && node jd_MktV50.js >> /scripts/logs/jd_MktV50.log 2>&1
+#21 1,19 * * *  cd /scripts && node jd_MktV50.js >> /scripts/logs/jd_MktV50.log 2>&1
 
 #玩一玩的摇一摇
 30 19 * * *  cd /scripts && node jd_yaoyao.js >> /scripts/logs/jd_yaoyao.log 2>&1
 
 #小范大人V你618
-01 3,20 * * *  cd /scripts && node jd_fanV618.js >> /scripts/logs/jd_fanV618.log 2>&1
+#01 3,20 * * *  cd /scripts && node jd_fanV618.js >> /scripts/logs/jd_fanV618.log 2>&1
 
 #小范大人V你50
-53 3,20 * * *  cd /scripts && node jd_fanV50.js >> /scripts/logs/jd_fanV50.log 2>&1
+#53 3,20 * * *  cd /scripts && node jd_fanV50.js >> /scripts/logs/jd_fanV50.log 2>&1
+
+
+
+#看视频赚现金-任务
+53 3,20 * * *  cd /scripts && node jd_video_task.js >> /scripts/logs/jd_video_task.log 2>&1
 
 
 
