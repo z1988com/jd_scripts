@@ -57,8 +57,7 @@
 #MM领京豆 入口：首页-领京豆-升级赚京豆
 0 9,19 * * * node /scripts/gua_MMdou.js >> /scripts/logs/gua_MMdou.log 2>&1
 
-# 玩一玩成就
-#36 8,22 * * *  node /scripts/jd_wyw.js >> /scripts/logs/jd_wyw.log 2>&1
+
 
 25 6,10,18 * * * node /scripts/jd_superBrandZII.js >> /scripts/logs/jd_superBrandZII.log 2>&1
 
@@ -274,6 +273,10 @@
 
 #玩一玩-翻翻乐
 45 0-23/3 * * *  node /scripts/jd_wyw_ffl.js >> /scripts/logs/jd_wyw_ffl.log 2>&1
+
+# 玩一玩成就
+#36 8,22 * * *  node /scripts/jd_wyw.js >> /scripts/logs/jd_wyw.log 2>&1
+
 
 #618开心夜任务
 #30 0,7,18 * * *  cd /scripts && node jd_618kxy_task.js >> /scripts/logs/jd_618kxy_task.log 2>&1
