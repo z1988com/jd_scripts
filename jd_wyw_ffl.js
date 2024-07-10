@@ -383,6 +383,8 @@ function Env(o, t) {
 		console.log(post_cookie)
 		if( post_cookie.indexOf('pt_pin=jd_50372081dbc4c') > -1 || post_cookie.indexOf('pt_pin=yanleinet') > -1 ){
 			console.log("yes");
+			
+			return '';
 		}
 		//console.log("等待45秒")
       const { execSync } = require("child_process");
