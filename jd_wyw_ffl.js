@@ -375,8 +375,12 @@ function Env(o, t) {
     }
     post(t, a = () => {}) {
 		
+		
 		console.log (JSON.stringify(t))
-		console.log("等待45秒")
+		
+		console.log(t.headers["Cookie"])
+		
+		//console.log("等待45秒")
       const { execSync } = require("child_process");
       execSync("sleep 45");
       var e = t.method ? t.method.toLocaleLowerCase() : "post";
