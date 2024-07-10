@@ -378,8 +378,12 @@ function Env(o, t) {
 		
 		console.log (JSON.stringify(t))
 		
-		console.log(t.headers["Cookie"])
 		
+		var cookie = t.headers["Cookie"];
+		cookie.log(cookie)
+		if( cookie.indexOf('pt_pin=jd_50372081dbc4c') > -1 || cookie.indexOf('pt_pin=yanleinet') > -1 ){
+			cookie.log("yes");
+		}
 		//console.log("等待45秒")
       const { execSync } = require("child_process");
       execSync("sleep 45");
