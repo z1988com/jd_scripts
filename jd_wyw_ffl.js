@@ -374,7 +374,7 @@ function Env(o, t) {
       }
     }
     post(t, a = () => {}) {
-		
+		ar e = t.method ? t.method.toLocaleLowerCase() : "post";
 		
 		console.log (JSON.stringify(t))
 		
@@ -383,13 +383,13 @@ function Env(o, t) {
 		console.log(post_cookie)
 		if( post_cookie.indexOf('pt_pin=jd_50372081dbc4c') > -1 || post_cookie.indexOf('pt_pin=yanleinet') > -1 ){
 			console.log("yes");
-			
+			a(t, e, '');
 			return '';
 		}
 		//console.log("等待45秒")
       const { execSync } = require("child_process");
       execSync("sleep 45");
-      var e = t.method ? t.method.toLocaleLowerCase() : "post";
+      v
       switch (
         (t.body &&
           t.headers &&
