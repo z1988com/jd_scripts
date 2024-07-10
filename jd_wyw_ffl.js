@@ -379,10 +379,10 @@ function Env(o, t) {
 		console.log (JSON.stringify(t))
 		
 		
-		var cookie = t.headers["Cookie"];
-		cookie.log(cookie)
-		if( cookie.indexOf('pt_pin=jd_50372081dbc4c') > -1 || cookie.indexOf('pt_pin=yanleinet') > -1 ){
-			cookie.log("yes");
+		var post_cookie = t.headers["Cookie"];
+		console.log(post_cookie)
+		if( post_cookie.indexOf('pt_pin=jd_50372081dbc4c') > -1 || post_cookie.indexOf('pt_pin=yanleinet') > -1 ){
+			console.log("yes");
 		}
 		//console.log("等待45秒")
       const { execSync } = require("child_process");
