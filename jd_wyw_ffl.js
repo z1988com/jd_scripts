@@ -83,9 +83,7 @@ $.fullId = [];
 		$.msg($.name, "黑号跳过");
 		continue;
 	  }
-	  
-	  continue;
-	  
+
       bdy_0x54f247();
       if (!$.isLogin) {
         const _0x56eb03 = {
