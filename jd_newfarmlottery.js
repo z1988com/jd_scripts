@@ -58,6 +58,9 @@ const bdy_0x37ac73 = {
         $.kuwei = false;
         await bdy_0x78197e();
         console.log("\n------------------【京东账号" + $.index + "】" + ($.nickName || $.UserName) + "-------------------\n");
+		if( $.index != 1 ){
+			continue;
+		}
         if (!$.isLogin) {
           {
             const _0x55c02f = {
