@@ -78,9 +78,9 @@ $.fullId = [];
       console.log("\n******开始【京东账号" + $.index + "】" + ($.nickName || $.UserName) + "*********\n");
 	  
 	  if(wyw_black.indexOf($.UserName)){
-		   $.msg($.name, "黑号跳过");
-		   continue;
-	   }
+		console.log("黑号跳过\n");
+		continue;
+	  }
 	  
 	  
       bdy_0x54f247();
