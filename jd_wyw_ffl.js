@@ -8,7 +8,10 @@ const bdy_0x2d2f06 = $.isNode() ? require("./jdCookie.js") : "",
   bdy_0x4ff426 = require("./function/dylans"),
   bdy_0x4bff68 = require("./function/dylib.js"),
   bdy_0x526e28 = process.env.WYW_DBNUM ? process.env.WYW_DBNUM : "100",
-  bdy_0x480def = process.env.WYW_DBCOUNT ? process.env.WYW_DBCOUNT : "1";
+  bdy_0x480def = process.env.WYW_DBCOUNT ? process.env.WYW_DBCOUNT : "1",
+  
+  wyw_black = process.env.WYW_BLACK ? process.env.WYW_BLACK : "";
+   
 let bdy_0x51b4ca = "",
   bdy_0x252c8a = {};
 if (process.env.DY_PROXY) {
@@ -63,12 +66,7 @@ $.fullId = [];
     originCookie = bdy_0x9905c[_0x666612];
     if (bdy_0xe29040) {
       $.UserName = decodeURIComponent(bdy_0xe29040.match(/pt_pin=([^; ]+)(?=;?)/) && bdy_0xe29040.match(/pt_pin=([^; ]+)(?=;?)/)[-2081 * -4 + 9091 + -1 * 17414]);
-	  
-	  if($.UserName == "jd_50372081dbc4c" || $.UserName == "hjiahui_m" || $.UserName == "jd_FJDHxgZSUfgD"  || $.UserName == "jd_hUAtWfbkEhbI" || $.UserName == "李厚才"    || $.UserName == "jd_685ab0b493712"   || $.UserName == "jd_TXjFVtOIjvqp"  || $.UserName == "jd_59e73f887dcda"  || $.UserName == "YANG138138"  || $.UserName == "wdXUzazTIXdHEH"   || $.UserName == "jd_4d0a8b1d27ece" ){
-		  $.msg($.UserName,"黑号跳过");
-		   continue;
-	  }
-	  
+
       $.index = _0x666612 + (-19 * -91 + 14 * -577 + 6350);
       $.hotFlag = false;
       $.nickName = "";
@@ -78,6 +76,13 @@ $.fullId = [];
       $.hasRisk = false;
       bdy_0x51b4ca = bdy_0x526e28;
       console.log("\n******开始【京东账号" + $.index + "】" + ($.nickName || $.UserName) + "*********\n");
+	  
+	  if(wyw_black.indexOf($.UserName)){
+		   $.msg($.name, "黑号跳过");
+		   continue;
+	   }
+	  
+	  
       bdy_0x54f247();
       if (!$.isLogin) {
         const _0x56eb03 = {
