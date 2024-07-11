@@ -4160,9 +4160,9 @@ class _0x333e45 extends _0x24046c {
   }
 }
 !(async () => {
-  if (!(await _0x342cb7())) {
-    return;
-  }
+  //if (!(await _0x342cb7())) {
+  //  return;
+  //}
   await _0xdfa6ec();
   _0x4c672b.read_env(_0x333e45);
   _0x4c672b.log("\n----" + "-----" + "-----" + "-----" + "-----" + "-----" + "-----" + "--");

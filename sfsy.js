@@ -3163,9 +3163,9 @@ class _0x520715 extends _0x49bd9d {
   }
 }
 !(async () => {
-  if (!(await _0x1325bb())) {
+  //if (!(await _0x1325bb())) {
     //return;
-  }
+  //}
   await _0x1a0bdc();
   _0x1366a8.read_env(_0x520715);
   let _0xb2066d = _0x94f81d == "true" ? "运行" : "不运行";
