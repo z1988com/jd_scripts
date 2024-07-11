@@ -64,8 +64,8 @@ $.fullId = [];
     if (bdy_0xe29040) {
       $.UserName = decodeURIComponent(bdy_0xe29040.match(/pt_pin=([^; ]+)(?=;?)/) && bdy_0xe29040.match(/pt_pin=([^; ]+)(?=;?)/)[-2081 * -4 + 9091 + -1 * 17414]);
 	  
-	  if($.UserName == "yanleinet"){
-		  $.msg($.name,"黑号跳过");
+	  if($.UserName == "jd_50372081dbc4c" || $.UserName == "hjiahui_m" || $.UserName == "jd_FJDHxgZSUfgD"  || $.UserName == "jd_hUAtWfbkEhbI" || $.UserName == "李厚才"    || $.UserName == "jd_685ab0b493712"   || $.UserName == "jd_TXjFVtOIjvqp"  || $.UserName == "jd_59e73f887dcda"  || $.UserName == "YANG138138"  || $.UserName == "wdXUzazTIXdHEH"   || $.UserName == "jd_4d0a8b1d27ece" ){
+		  $.msg($.UserName,"黑号跳过");
 		   continue;
 	  }
 	  
@@ -156,6 +156,7 @@ async function bdy_0x4d1d1a() {
           if (!$.dbsuc) {
             break;
           }
+		  await $.wait(1000*30)
           await $.wait(parseInt(Math.random() * (7617 + -4410 + -2207) + (-6218 + 6224 + 1494), 11857 + -11847));
         }
         $.dbsuc && (await bdy_0x46612f("turnHappyReceive"));
@@ -163,6 +164,8 @@ async function bdy_0x4d1d1a() {
         console.log("\n" + bdy_0x4bff68.SecToTime(parseInt($.leftTime / (-2474 * -2 + -97 * -7 + -4627 * 1))) + "后可参与翻翻乐");
       }
     }
+	await $.wait(1000*30)
+	
     await $.wait(parseInt(Math.random() * (7689 + -1211 * -5 + -14 * 946) + (-1 * -8081 + 6153 + -13734), 5882 + -213 * -26 + 10 * -1141));
     await bdy_0x46612f("turnHappyDetailList", 6548 + -390 + 47 * -131);
     $.detailList.length == 4766 + -72 * 8 + -4160 && (await $.wait(parseInt(Math.random() * (-5250 + 5112 + 638) + (491 * -7 + 619 * -13 + 11984), -1405 + -5536 + -6951 * -1)), await bdy_0x46612f("turnHappyDetailList", -4 * -1637 + -3 * 697 + -5 * 891));
