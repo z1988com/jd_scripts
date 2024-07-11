@@ -82,6 +82,7 @@ $.fullId = [];
 		continue;
 	  }
 	  
+	  continue;
 	  
       bdy_0x54f247();
       if (!$.isLogin) {
