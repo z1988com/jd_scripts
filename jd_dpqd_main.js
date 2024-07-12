@@ -140,8 +140,8 @@ async function _0x4f6c20() {
         _0x24a4a7.prize = $.prize;
         _0x40cdb6.set($.TokenLists[_0x4877e3], _0x24a4a7);
       }
-	  $.log("\n休息15秒");
-      await $.wait(1000*15);
+	  $.log("\n休息5秒");
+      await $.wait(1000*5);
     }
   }
 }
