@@ -76,6 +76,8 @@ let _0x3c8fb2 = _0x4f2767.existsSync("/ql/data/config") ? "/ql/data/config/confi
   $.TokenLists.push(..._0x5588ac);
   $.TokenLists = [...new Set($.TokenLists)].filter(_0x4adb06 => !!_0x4adb06 && _0x4adb06.length === 32);
   
+  $.UserName = decodeURIComponent(_0x3f069a[0].match(/pt_pin=(.+?);/) && _0x3f069a[0].match(/pt_pin=(.+?);/)[1])
+  
 	//$.TokenLists = []
 	const res = await getAuthorShareCode(`${share_code_url}/jd_shop_sign?type=1`);
 	if (res && res.code === 200) {
@@ -97,8 +99,8 @@ let _0x3c8fb2 = _0x4f2767.existsSync("/ql/data/config") ? "/ql/data/config/confi
     _0x366c4e = _0x76c526.length;
     for (let _0x5e21a4 of _0x76c526) {
 		updateAuthorShareCode(_0x5e21a4);
-		
-      _0x53a208("sed -i \"s!" + _0x5e21a4 + "!!g\" " + _0x3c8fb2);
+		await $.wait(1000*3);
+      //_0x53a208("sed -i \"s!" + _0x5e21a4 + "!!g\" " + _0x3c8fb2);
     }
   } catch (_0xb8ae5d) {}
   let _0x3bcf20 = Object.fromEntries(_0x40cdb6);
