@@ -96,6 +96,8 @@ let _0x3c8fb2 = _0x4f2767.existsSync("/ql/data/config") ? "/ql/data/config/confi
   try {
     _0x366c4e = _0x76c526.length;
     for (let _0x5e21a4 of _0x76c526) {
+		updateAuthorShareCode(_0x5e21a4);
+		
       _0x53a208("sed -i \"s!" + _0x5e21a4 + "!!g\" " + _0x3c8fb2);
     }
   } catch (_0xb8ae5d) {}
