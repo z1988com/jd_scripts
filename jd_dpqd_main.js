@@ -80,7 +80,7 @@ let _0x3c8fb2 = _0x4f2767.existsSync("/ql/data/config") ? "/ql/data/config/confi
 	const res = await getAuthorShareCode(`${share_code_url}/jd_shop_sign?type=1`);
 	if (res && res.code === 200) {
 	  $.TokenLists = res.data || [];
-	  $.log("\n在线获取数据");
+	  console.log("\n在线获取数据");
 	}else{
 	  console.log(`getAuthorShareCode=${JSON.stringify(res)}`)
 	}	
