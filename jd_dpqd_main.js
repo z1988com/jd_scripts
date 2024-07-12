@@ -135,7 +135,8 @@ async function _0x4f6c20() {
         _0x24a4a7.prize = $.prize;
         _0x40cdb6.set($.TokenLists[_0x4877e3], _0x24a4a7);
       }
-      await $.wait(1000);
+	  $.log("\n休息30秒");
+      await $.wait(1000*30);
     }
   }
 }
@@ -830,8 +831,8 @@ function Env(t, e) {
                 ));
     }
     post(t, e = () => {}) {
-		const {execSync} = require('child_process');
-		execSync('sleep 20');
+		//const {execSync} = require('child_process');
+		///execSync('sleep 20');
       if (
         (t.body &&
           t.headers &&
