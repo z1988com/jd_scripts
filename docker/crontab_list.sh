@@ -271,8 +271,8 @@
 #玩一玩竞猜
 51 4,20 * * *  node /scripts/jd_wyw_cai.js >> /scripts/logs/jd_wyw_cai.log 2>&1
 
-#玩一玩-翻翻乐
-45 0-23/4 * * *  node /scripts/jd_wyw_ffl.js >> /scripts/logs/jd_wyw_ffl.log 2>&1
+#玩一玩-翻翻乐 亏
+#45 0-23/4 * * *  node /scripts/jd_wyw_ffl.js >> /scripts/logs/jd_wyw_ffl.log 2>&1
 
 
 #玩一玩-任务抽奖;
