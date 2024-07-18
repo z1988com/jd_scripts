@@ -120,7 +120,10 @@ async function bdy_0x1378f9() {
               break;
             }
           }
-          await $.wait(9050 + 15 * -526 + 1840);
+		  console.log("休息15秒");
+		  await $.wait(1000*15);
+		  
+          //await $.wait(9050 + 15 * -526 + 1840);
         }
       }
     }
@@ -143,6 +146,9 @@ async function bdy_0x1378f9() {
           console.log("错误了！");
           break;
         }
+		console.log("休息30秒");
+		await $.wait(1000*30);
+		  
         await $.wait(-533 * 13 + -1 * 3919 + -12 * -1154);
       }
       _0x2c8572 && console.log("天天抽奖奖励：" + _0x2c8572.substr(9713 + 5099 * -1 + -4614, _0x2c8572.length - (-5791 * 1 + 894 * -2 + 7580)) + "\n");
