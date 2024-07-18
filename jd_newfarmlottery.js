@@ -77,6 +77,10 @@ const bdy_0x37ac73 = {
         $.UA = bdy_0x2643f3.UARAM ? bdy_0x2643f3.UARAM() : bdy_0x2643f3.USER_AGENT;
         $.UUID = bdy_0x48f5a8.UUID("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
         await bdy_0x25d2c6();
+		
+		console.log("休息30秒");
+		await $.wait(1000*30);
+		  
         await $.wait(6534 + 4 * -100 + -4134);
       }
     }
@@ -127,6 +131,9 @@ async function bdy_0x1378f9() {
         }
       }
     }
+	console.log("休息15秒");
+		  await $.wait(1000*15);
+		  
     await bdy_0x358796();
     if ($.initForTurntableFarmRes.data.lotteryChances > 9184 + -2 * 4592) {
       console.log("\n天天抽奖次数 " + $.initForTurntableFarmRes.data.lotteryChances);
