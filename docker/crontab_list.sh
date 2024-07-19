@@ -267,16 +267,16 @@
 #新版玩一玩
 # 1.活动时间：2024年5月17日 12:00:00—2024年8月31日23:59:59
 # 2.活动入口： APP我的——更多游戏——玩一玩
-41 3,19 * * *  node /scripts/jd_wanyiwan.js >> /scripts/logs/jd_wanyiwan.log 2>&1
+#41 3,19 * * *  node /scripts/jd_wanyiwan.js >> /scripts/logs/jd_wanyiwan.log 2>&1
 #玩一玩竞猜
-51 4,20 * * *  node /scripts/jd_wyw_cai.js >> /scripts/logs/jd_wyw_cai.log 2>&1
+#51 4,20 * * *  node /scripts/jd_wyw_cai.js >> /scripts/logs/jd_wyw_cai.log 2>&1
 
 #玩一玩-翻翻乐 亏
 #45 0-23/4 * * *  node /scripts/jd_wyw_ffl.js >> /scripts/logs/jd_wyw_ffl.log 2>&1
 
 
 #玩一玩-任务抽奖;
-39 6,21  * * *  node /scripts/jd_wyw_lottery.js >> /scripts/logs/jd_wyw_lottery.log 2>&1
+#39 6,21  * * *  node /scripts/jd_wyw_lottery.js >> /scripts/logs/jd_wyw_lottery.log 2>&1
 
 # 玩一玩成就
 #36 8,22 * * *  node /scripts/jd_wyw.js >> /scripts/logs/jd_wyw.log 2>&1
