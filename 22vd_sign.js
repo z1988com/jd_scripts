@@ -51,8 +51,8 @@ if ($.isNode()) {
 	  //签到
 	  await signDaySign();
 
-	  //await showMsg()
-      if(i  <1 ) {await showMsg()}
+	  await showMsg()
+      //if(i  <1 ) {await showMsg()}
 	  if(  i <  cookiesArr.length -1 ){
 		console.log(`休息120秒`)
 		await $.wait(1000 * 60*3);   
