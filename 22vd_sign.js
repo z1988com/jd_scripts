@@ -33,7 +33,7 @@ if ($.isNode()) {
       $.index = i + 1;
       $.isLogin = true;
       $.nickName = '';
-      message = '';
+      $.message = '';
 
       await TotalBean();
       console.log(`\n******开始【云模板账号 ${$.index}】${$.nickName || $.UserName} *********\n`);
@@ -50,19 +50,9 @@ if ($.isNode()) {
 	
 	  //签到
 	  await signDaySign();
-	  //await $.wait(1000 * 15);
-	  //积分
-	  //await getIntegral();
-	  //await $.wait(1000 * 15);
-	  //红包
-	  //await getConvertTelephone();
-	  //await $.wait(1000 * 15);
-	  //签到天数
-	  //await signinGetContinuous();
-	  //await $.wait(5000 * 15);
-      //await signinGetContinuous();
+
 	  //await showMsg()
-      //if(i  <1 ) {await showMsg()}
+      if(i  <1 ) {await showMsg()}
 	  if(  i <  cookiesArr.length -1 ){
 		console.log(`休息120秒`)
 		await $.wait(1000 * 60*3);   
@@ -94,14 +84,16 @@ async function signDaySign(  ) {
 
           if (data === '1') {
 			   
-				 
+			$.message += `签到成功 \n`;	 
 			console.log( `其他情况：${data}`)
 			   
 			
 		  }else if (data === '2') {
+			$.message += `今天已签到 \n`;
 			console.log( `今天已签到`)
           } else {
-            console.log( `${data}`)
+			  $.message += `其他情况：${data} \n`;	 
+            console.log( `其他情况：${data}`)
           }
         //}
       }
@@ -131,7 +123,9 @@ function TotalBean() {
 		'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0',
 		'referer': 'https://www.22vd.com/user',
 		'Cookie': cookie
-      }
+      },
+	  body: 'action=get_posts_24hours&post=post',
+		timeout: 1000*10,
     }
     $.post(options, (err, resp, data) => {
       try {
@@ -189,7 +183,7 @@ function taskUrl(url,body, cookie ) {
 
 async function showMsg() {
   if ($.isNode()) {
-    $.msg($.name, '', `【云模板账号${$.index}】${$.nickName}\n${message}`);
+    $.msg($.name, '', `【云模板账号${$.index}】${$.nickName}\n${$.message}`);
     await notify.sendNotify(`${$.name} - 账号${$.index} - ${$.nickName}`, `【云模板账号${$.index}】${$.nickName}\n${message}`);
   }
 }
