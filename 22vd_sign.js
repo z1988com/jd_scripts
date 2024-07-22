@@ -50,7 +50,7 @@ if ($.isNode()) {
 	
 	  //签到
 	  await signDaySign();
-
+	  await $.wait(1000 * 5); 
 	  await showMsg()
       //if(i  <1 ) {await showMsg()}
 	  if(  i <  cookiesArr.length -1 ){
