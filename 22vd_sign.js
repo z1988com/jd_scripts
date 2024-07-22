@@ -84,15 +84,15 @@ async function signDaySign(  ) {
 
           if (data === '1') {
 			   
-			message += `签到成功 \n`;	 
+			$.message += `签到成功 \n`;	 
 			console.log( `其他情况：${data}`)
 			   
 			
 		  }else if (data === '2') {
-			message += `今天已签到 \n`;
+			$.message += `今天已签到 \n`;
 			console.log( `今天已签到`)
           } else {
-			message += `其他情况：${data} \n`;	 
+			$.message += `其他情况：${data} \n`;	 
             console.log( `其他情况：${data}`)
           }
         //}
@@ -183,8 +183,8 @@ function taskUrl(url,body, cookie ) {
 
 async function showMsg() {
   if ($.isNode()) {
-    $.msg($.name, '', `【云模板账号${$.index}】${$.nickName}\n${message}`);
-    await notify.sendNotify(`${$.name} - 账号${$.index} - ${$.nickName}`, `【云模板账号${$.index}】${$.nickName}\n${message}`);
+    $.msg($.name, '', `【云模板账号${$.index}】${$.nickName}\n${$.message}`);
+    await notify.sendNotify(`${$.name} - 账号${$.index} - ${$.nickName}`, `【云模板账号${$.index}】${$.nickName}\n${$.message}`);
   }
 }
 
