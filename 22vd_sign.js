@@ -184,7 +184,7 @@ function taskUrl(url,body, cookie ) {
 async function showMsg() {
   if ($.isNode()) {
     $.msg($.name, '', `【云模板账号${$.index}】${$.nickName}\n${$.message}`);
-    await notify.sendNotify(`${$.name} - 账号${$.index} - ${$.nickName}`, `【云模板账号${$.index}】${$.nickName}\n${message}`);
+    await notify.sendNotify(`${$.name} - 账号${$.index} - ${$.nickName}`, `【云模板账号${$.index}】${$.nickName}\n${$.message}`);
   }
 }
 
