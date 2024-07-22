@@ -22,7 +22,7 @@ if ($.isNode()) {
 
 !(async () => {
   if (!cookiesArr[0]) {
-    $.msg($.name, '【提示】请先获取联通账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
+    $.msg($.name, '【提示】请先获取云模板账号一cookie\n直接使用NobyDa的云模板签到获取', 'https://www.22vd.com/sign', {"open-url": "https://www.22vd.com/sign"});
     return;
   }
   
@@ -36,9 +36,9 @@ if ($.isNode()) {
       message = '';
 
       await TotalBean();
-      console.log(`\n******开始【联通账号 ${$.index}】${$.nickName || $.UserName} *********\n`);
+      console.log(`\n******开始【云模板账号 ${$.index}】${$.nickName || $.UserName} *********\n`);
       if ( !$.isLogin) {
-        $.msg($.name, `【提示】cookie已失效`, `云模板账号${$.index} ${$.nickName || $.UserName}\n请重新登录获取\nhttps://bean.m.jd.com/bean/signIndex.action`, {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
+        $.msg($.name, `【提示】cookie已失效`, `云模板账号${$.index} ${$.nickName || $.UserName}\n请重新登录获取\nhttps://www.22vd.com/sign`, {"open-url": "https://www.22vd.com/sign"});
 
         if ($.isNode()) {
           await notify.sendNotify(`${$.name}cookie已失效 - ${$.UserName}`, `云模板账号${$.index} ${$.UserName}\n请重新登录获取cookie`);
