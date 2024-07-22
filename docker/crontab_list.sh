@@ -338,3 +338,4 @@
 
 #话费红包签到
 51 7,19 * * * node /scripts/unicom_day_sign.js >> /scripts/logs/unicom_day_sign.log 2>&1
+
