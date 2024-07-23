@@ -82,7 +82,7 @@ async function signDaySign(  ) {
 	
         //if (safeGet(data)) {
 
-          if (data === '1') {
+          if (data === '3') {
 			   
 			$.message += `签到成功 \n`;	 
 			console.log( `其他情况：${data}`)
@@ -90,7 +90,7 @@ async function signDaySign(  ) {
 			
 		  }else if (data === '2') {
 			$.message += `今天已签到 \n`;
-			console.log( `今天已签到`)
+			console.log( `签到成功：${data}`)
           } else {
 			$.message += `其他情况：${data} \n`;	 
             console.log( `其他情况：${data}`)
