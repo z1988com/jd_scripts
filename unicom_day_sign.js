@@ -31,7 +31,7 @@ if ($.isNode()) {
       $.index = i + 1;
       $.isLogin = true;
       $.nickName = '';
-      message = '';
+      $.message = '';
       await TotalBean();
       console.log(`\n******开始【联通账号 ${$.index}】${$.nickName || $.UserName} *********\n`);
       if ( !$.isLogin) {
@@ -56,7 +56,7 @@ if ($.isNode()) {
 	  await signinGetContinuous();
 	  await $.wait(5000 * 15);
       //await signinGetContinuous();
-	  //await showMsg()
+	  await showMsg()
       //if(i  <1 ) {await showMsg()}
 	  if(  i <  cookiesArr.length -1 ){
 		console.log(`休息120秒`)
@@ -174,7 +174,7 @@ async function getConvertTelephone(  ) {
           if (data.status === '0000') {
             if (data.data) {
 				$.userConvertTelephone = data.data
-				
+				$.message += `当前话费红包：${$.userConvertTelephone.telephone} \n`;	 
 				console.log(`当前话费红包：${$.userConvertTelephone.telephone}`)
             } else {
              
@@ -207,7 +207,7 @@ async function getIntegral(  ) {
           if (data.status === '0000') {
             if (data.data) {
 				$.userIntegral = data.data
-				
+				$.message += `当前积分：${$.userIntegral.integralTotal} \n`
 				console.log( `当前积分：${$.userIntegral.integralTotal}`)
             } else {
              
@@ -320,6 +320,9 @@ async function signinGetContinuous(  ) {
 			    if (data.data) {
 					//$.userIntegral = data.data
 					let doubleBtn = data.data.doubleBtn
+					
+					$.message += `已签到：${doubleBtn.yetDays}，再签到 ${doubleBtn.notDays} 天，领 ${doubleBtn.giftName}\n`
+					
 					console.log(`已签到：${doubleBtn.yetDays}，再签到 ${doubleBtn.notDays} 天，领 ${doubleBtn.giftName}\n`)
 				
 
