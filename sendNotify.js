@@ -218,14 +218,14 @@ async function sendNotify(text, desp, params = {}, author = '\n\n' + end_txt) {
     //由于上述两种微信通知需点击进去才能查看到详情，故text(标题内容)携带了账号序号以及昵称信息，方便不点击也可知道是哪个京东哪个活动
     text = text.match(/.*?(?=\s?-)/g) ? text.match(/.*?(?=\s?-)/g)[0] : text;
     await Promise.all([
-      BarkNotify(text, desp, params), //iOS Bark APP
-      tgBotNotify(text, desp), //telegram 机器人
+      //BarkNotify(text, desp, params), //iOS Bark APP
+      //tgBotNotify(text, desp), //telegram 机器人
       ddBotNotify(text, desp), //钉钉机器人
-      qywxBotNotify(text, desp), //企业微信机器人
-      qywxamNotify(text, desp), //企业微信应用消息推送
-      iGotNotify(text, desp, params), //iGot
+      //qywxBotNotify(text, desp), //企业微信机器人
+      //qywxamNotify(text, desp), //企业微信应用消息推送
+      //iGotNotify(text, desp, params), //iGot
       //CoolPush(text, desp)//QQ酷推
-      goCQhttp(text, desp)  // go-cqhttp
+      //goCQhttp(text, desp)  // go-cqhttp
     ])
   }
 }
