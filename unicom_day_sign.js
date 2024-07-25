@@ -425,7 +425,7 @@ async function showMsg() {
 	
     $.msg($.name, '', `【联通账号${$.index}】${$.nickName}\n${$.message}`);
     await notify.sendNotify(`${$.name} - 账号${$.index} - ${$.nickName}`, `【联通账号${$.index}】${$.nickName}\n${$.message}`);
-  }
+  
 }
 
 
