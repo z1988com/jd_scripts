@@ -6,7 +6,7 @@ const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
 const unicomCookieNode = $.isNode() ? require('./unicomCookie.js') : '';
 //IOS等用户直接用NobyDa的jd cookie
-let cookiesArr = [], cookie = '', message, $.message = '';
+let cookiesArr = [], cookie = '', message;
 
 if ($.isNode()) {
   Object.keys(unicomCookieNode).forEach((item) => {
@@ -31,7 +31,8 @@ if ($.isNode()) {
       $.index = i + 1;
       $.isLogin = true;
       $.nickName = '';
-     
+	  $.message = '';
+	  
       await TotalBean();
       console.log(`\n******开始【联通账号 ${$.index}】${$.nickName || $.UserName} *********\n`);
       if ( !$.isLogin) {
@@ -56,7 +57,7 @@ if ($.isNode()) {
 	  await signinGetContinuous();
 	  await $.wait(5000 * 15);
       //await signinGetContinuous();
-	  
+	  await showMsg();
       //if(i  <1 ) {await showMsg()}
 	  if(  i <  cookiesArr.length -1 ){
 		console.log(`休息120秒`)
@@ -420,11 +421,11 @@ function taskUrl(url,body, cookie ) {
 }
 
 async function showMsg() {
-  if ($.isNode()) {
+	/*if ($.isNode()) {
 	  return new Promise(resolve => {
         if (message) $.msg($.name, '', `【京东账号${$.index}】${$.nickName}\n${message}`);
         resolve()
-    })
+    })*/
 	
     $.msg($.name, '', `【联通账号${$.index}】${$.nickName}\n${$.message}`);
     await notify.sendNotify(`${$.name} - 账号${$.index} - ${$.nickName}`, `【联通账号${$.index}】${$.nickName}\n${$.message}`);
