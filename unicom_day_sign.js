@@ -57,7 +57,7 @@ if ($.isNode()) {
 	  await signinGetContinuous();
 	  await $.wait(5000 * 15);
       //await signinGetContinuous();
-	  await showMsg();
+	  await showMsg()
       //if(i  <1 ) {await showMsg()}
 	  if(  i <  cookiesArr.length -1 ){
 		console.log(`休息120秒`)
@@ -421,11 +421,7 @@ function taskUrl(url,body, cookie ) {
 }
 
 async function showMsg() {
-	/*if ($.isNode()) {
-	  return new Promise(resolve => {
-        if (message) $.msg($.name, '', `【京东账号${$.index}】${$.nickName}\n${message}`);
-        resolve()
-    })*/
+
 	
     $.msg($.name, '', `【联通账号${$.index}】${$.nickName}\n${$.message}`);
     await notify.sendNotify(`${$.name} - 账号${$.index} - ${$.nickName}`, `【联通账号${$.index}】${$.nickName}\n${$.message}`);
