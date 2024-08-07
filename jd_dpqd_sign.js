@@ -50,7 +50,9 @@ if (_0x1635fa.existsSync(_0x2f4215)) {
   for (const _0x2f88e9 in _0x719d1f) {
     _0x557cff.set(_0x2f88e9, _0x719d1f[_0x2f88e9]);
 	
-	$.TokenLists.push(..._0x2f88e9);
+	console.log(`${_0x2f88e9}`);
+	
+	$.TokenLists.push(_0x2f88e9);
   }
 }
 !(async () => {
