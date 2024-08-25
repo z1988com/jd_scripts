@@ -71,7 +71,7 @@
 10 8,20 * * * node /scripts/jd_superBrandStar.js >> /scripts/logs/jd_superBrandStar.log 2>&1
 
 #特务之明星送好礼
-10 7,13,,21 * * * node /scripts/jd_superBrandStar_.js >> /scripts/logs/jd_superBrandStar_.log 2>&1
+10 7,13,16,21 * * * node /scripts/jd_superBrandStar_.js >> /scripts/logs/jd_superBrandStar_.log 2>&1
 
 # 京享值任务领豆，每周一次
 #19 10 * * * node /scripts/jd_vipgrowth.js >> /scripts/logs/jd_vipgrowth.log 2>&1
@@ -172,7 +172,7 @@
 #36 7,17  * * *  node /scripts/jd_jlong.js >> /scripts/logs/jd_jlong.log 2>&1
 
 #东东健康社区
-47 0,6,16,,22 * * *  node /scripts/jd_health_task.js >> /scripts/logs/jd_health_task.log 2>&1
+47 0,6,16,19,22 * * *  node /scripts/jd_health_task.js >> /scripts/logs/jd_health_task.log 2>&1
 
 #东东健康社区收集能量收集
 #5-45/20 0-4 * * *  node /scripts/jd_health_collect.js >> /scripts/logs/jd_health_collect.log 2>&1
