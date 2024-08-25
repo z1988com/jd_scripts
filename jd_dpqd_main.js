@@ -143,8 +143,8 @@ async function _0x29e6a9() {
         _0x1ca782.set($.TokenLists[_0x312191], _0x45f6c1);
       }
     }
-		$.log("\n休息5秒");
-      await $.wait(1000*5);
+		$.log("\n休息15秒");
+      await $.wait(1000*15);
     await $.wait(1000);
   }
 }
