@@ -85,7 +85,7 @@ async function signDaySign(  ) {
           if (data === '3') {
 			   
 			$.message += `签到成功 \n`;	 
-			console.log( `其他情况：${data}`)
+			console.log( `签到成功：${data}`)
 			   
 			
 		  }else if (data === '2') {
