@@ -116,6 +116,9 @@
 #新农场任务
 18 9,19 * * *  node /scripts/jd_fruit_new.js >> /scripts/logs/jd_fruit_new.log 2>&1
 
+#农场小程序助力
+#51 9,19 * * *  node /scripts/jd_farmshare.js >> /scripts/logs/jd_farmshare.log 2>&1
+
 
 #东东农场助力
 02 6,16 * * *  node /scripts/jd_farm_help.js >> /scripts/logs/jd_farm_help.log 2>&1
