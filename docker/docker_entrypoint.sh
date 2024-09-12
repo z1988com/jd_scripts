@@ -15,6 +15,12 @@ else
   npm cache clean --force
   echo "npm 切换新源..."
   npm config set registry https://registry.npmmirror.com
+ 
+  echo "npm install sharp@0.31.0..."
+  npm config set sharp_binary_host "https://npmmirror.com/mirrors/sharp"
+  npm config set sharp_libvips_binary_host "https://npmmirror.com/mirrors/sharp-libvips"
+  npm install sharp@0.31.0
+
   
   echo "设定远程仓库地址..."
   cd /scripts
