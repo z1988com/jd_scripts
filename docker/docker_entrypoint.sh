@@ -10,6 +10,7 @@ fi
 if [ -f "/scripts/logs/pull.lock" ]; then
   echo "存在更新锁定文件，跳过git pull操作..."
 else
+
   npm config get registry
   echo "npm 清空缓存..."
   npm cache clean --force
