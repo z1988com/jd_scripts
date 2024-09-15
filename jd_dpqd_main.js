@@ -147,6 +147,7 @@ async function _0x29e6a9() {
       await $.wait(1000*15);
     await $.wait(1000);
   }
+  await $.wait(1000*3);
 }
 async function _0x58c6e3(_0x164129) {
   let _0x5aabd2 = {
