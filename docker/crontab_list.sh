@@ -113,8 +113,8 @@
 #10.28-11.12 签到瓜分京豆
 #12 8,18 * * *  node /scripts/jd_dlgf.js >> /scripts/logs/jd_dlgf.log 2>&1
 
-#新农场任务
-18 9,19 * * *  node /scripts/jd_fruit_new.js >> /scripts/logs/jd_fruit_new.log 2>&1
+#新农场任务 20241006火爆了
+#18 9,19 * * *  node /scripts/jd_fruit_new.js >> /scripts/logs/jd_fruit_new.log 2>&1
 
 #农场小程序助力
 #51 9,19 * * *  node /scripts/jd_farmshare.js >> /scripts/logs/jd_farmshare.log 2>&1
