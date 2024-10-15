@@ -86,8 +86,8 @@
 #京喜特价金币 已下架（2024-05-07）
 05 13,19 * * *  cd /scripts && node jd_speed_sign2.js >> /scripts/logs/jd_speed_sign2.log 2>&1
 
-#特价版签到提现
-36 11,21 * * *  cd /scripts && node jd_tj_signcash.js >> /scripts/logs/jd_tj_signcash.log 2>&1
+#特价版签到提现新
+36 11,21 * * *  cd /scripts && node jd_tjqd_new.js >> /scripts/logs/jd_tjqd_new.log 2>&1
 
 
 #极速模式签到 失效
@@ -266,6 +266,12 @@
 
 #618红包
 #31 0,17 * * *  node /scripts/jd_618redp.js >> /scripts/logs/jd_618redp.log 2>&1
+
+#11领大鹅红包
+31 0,8,17 * * *  node /scripts/jd_getRed.js >> /scripts/logs/jd_getRed.log 2>&1
+
+
+
 
 #新版玩一玩
 # 1.活动时间：2024年5月17日 12:00:00—2024年8月31日23:59:59
