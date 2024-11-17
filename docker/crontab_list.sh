@@ -268,7 +268,7 @@
 #31 0,17 * * *  node /scripts/jd_618redp.js >> /scripts/logs/jd_618redp.log 2>&1
 
 #11领大鹅红包
-31 0,8,17 * * *  node /scripts/jd_getRed.js >> /scripts/logs/jd_getRed.log 2>&1
+#31 0,8,17 * * *  node /scripts/jd_getRed.js >> /scripts/logs/jd_getRed.log 2>&1
 
 
 
