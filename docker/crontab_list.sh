@@ -199,7 +199,7 @@
 #51 8,18 * * * node /scripts/jd_qszd.js >> /scripts/logs/jd_qszd.log 2>&1
 
 #批量店铺签到
-3 0,18 * * * node /scripts/jd_dpqd_sign.js >> /scripts/logs/jd_dpqd_sign.log 2>&1
+#3 0,18 * * * node /scripts/jd_dpqd_sign.js >> /scripts/logs/jd_dpqd_sign.log 2>&1
 
 
 #赚汪贝兑超市卡
@@ -213,7 +213,7 @@
 20 11,23 * * * node /scripts/jd_OnceApply.js >> /scripts/logs/jd_OnceApply.log 2>&1
  
 #Jd转赚红包
-5 0-23/2 * * * cd /scripts && node jd_zzhb.js >> /scripts/logs/jd_zzhb.log 2>&1
+#5 0-23/2 * * * cd /scripts && node jd_zzhb.js >> /scripts/logs/jd_zzhb.log 2>&1
 
 #Jd转赚红包_抽奖提现
 55 7,17,21 * * *  cd /scripts && node jd_zzhb_draw.js >> /scripts/logs/jd_zzhb_draw.log 2>&1
@@ -334,7 +334,7 @@
 16 9,21 * * * node /scripts/smzdm_lottery.js >> /scripts/logs/smzdm_lottery.log 2>&1
 
 #全民众测能量值任务
-46 11,23 * * * node /scripts/smzdm_testing.js >> /scripts/logs/smzdm_testing.log 2>&1
+#46 11,23 * * * node /scripts/smzdm_testing.js >> /scripts/logs/smzdm_testing.log 2>&1
 
 ############## 顺丰 ##############
 
