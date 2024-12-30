@@ -15,10 +15,10 @@
 #50 0,16 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
 
 # 东东农场
-43 6-18/6 * * * node /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
+#43 6-18/6 * * * node /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
 
 # 东东农场内部水滴互助
-26 5,17 * * *  node /scripts/jd_fruit_help.js >> /scripts/logs/jd_fruit_help.log 2>&1
+#26 5,17 * * *  node /scripts/jd_fruit_help.js >> /scripts/logs/jd_fruit_help.log 2>&1
 
 #汪汪乐园每日任务
 20 7,16 * * * node /scripts/jd_joypark_task.js >> /scripts/logs/jd_joypark_task.log 2>&1
@@ -121,7 +121,7 @@
 
 
 #东东农场助力
-02 6,16 * * *  node /scripts/jd_farm_help.js >> /scripts/logs/jd_farm_help.log 2>&1
+#02 6,16 * * *  node /scripts/jd_farm_help.js >> /scripts/logs/jd_farm_help.log 2>&1
 
 #新东东农场助力
 02 11,15,23 * * *  node /scripts/jd_farm_help_new.js >> /scripts/logs/jd_farm_help_new.log 2>&1
