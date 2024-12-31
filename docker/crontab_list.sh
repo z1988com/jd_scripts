@@ -76,8 +76,8 @@
 # 京享值任务领豆，每周一次
 #19 10 * * * node /scripts/jd_vipgrowth.js >> /scripts/logs/jd_vipgrowth.log 2>&1
 
-#每日抽豆
-39 8,13 * * *  node /scripts/jd_dygetbeans.js >> /scripts/logs/jd_dygetbeans.log 2>&1
+#每日抽豆  20241231  活动太火爆了, 请稍后再试哦~
+#39 8,13 * * *  node /scripts/jd_dygetbeans.js >> /scripts/logs/jd_dygetbeans.log 2>&1
 
 #天天签到礼享金 入口：app首页-家电家居-底部签到
 #38 13 * * *  node /scripts/jd_ttqdlxj.js >> /scripts/logs/jd_ttqdlxj.log 2>&1
@@ -218,8 +218,8 @@
 #Jd转赚红包_抽奖提现
 55 7,17,21 * * *  cd /scripts && node jd_zzhb_draw.js >> /scripts/logs/jd_zzhb_draw.log 2>&1
 
-#Jd转赚红包2
-36 0-23/2 * * *  cd /scripts && node jd_zzhb_new.js >> /scripts/logs/jd_zzhb_new.log 2>&1
+#Jd转赚红包2  2024-12-31太火爆了 💣
+#36 0-23/2 * * *  cd /scripts && node jd_zzhb_new.js >> /scripts/logs/jd_zzhb_new.log 2>&1
 
 
 #Jd转赚红包2_抽奖提现
@@ -250,13 +250,13 @@
 
 
 #欢乐淘金（发财挖宝）助力  入口：京东APP——玩一玩——欢乐淘金
-05 1,13,21  * * *  node /scripts/jd_fcwb_help.js >> /scripts/logs/jd_fcwb_help.log 2>&1
+#05 1,13,21  * * *  node /scripts/jd_fcwb_help.js >> /scripts/logs/jd_fcwb_help.log 2>&1
 #欢乐淘金（发财挖宝）
-09 8,14,22  * * *  node /scripts/jd_fcwb_auto.js >> /scripts/logs/jd_fcwb_auto.log 2>&1
+#09 8,14,22  * * *  node /scripts/jd_fcwb_auto.js >> /scripts/logs/jd_fcwb_auto.log 2>&1
 
 
 #京喜 欢乐淘金（发财挖宝）助力  入口：京东APP——玩一玩——欢乐淘金
-05 2,11,19  * * *  node /scripts/jx_fcwb_help.js >> /scripts/logs/jx_fcwb_help.log 2>&1
+#05 2,11,19  * * *  node /scripts/jx_fcwb_help.js >> /scripts/logs/jx_fcwb_help.log 2>&1
 #京喜 欢乐淘金（发财挖宝）
 01 3,13,21  * * *  node /scripts/jx_fcwb_auto.js >> /scripts/logs/jx_fcwb_auto.log 2>&1
 
