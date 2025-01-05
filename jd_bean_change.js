@@ -39,7 +39,6 @@ let RemainMessage = '\n';
 RemainMessage += "⭕提醒:⭕" + '\n';
 RemainMessage += '【特价金币】特价版APP->我的->金币(可兑换无门槛红包)\n';
 RemainMessage += '【话费积分】APP->充值中心-赚积分兑话费（180天效期）\n';
-RemainMessage += '【礼品卡额】APP->我的->礼品卡（包含E卡，品牌类卡，超市卡）\n';
 RemainMessage += '【超市卡】APP首页->京东超市->超市卡（超市商品可用）\n';
 RemainMessage += '【老农场】APP->我的->东东农场->回旧版,完成可兑换无门槛红包,可用于任意商品\n';
 RemainMessage += '【新农场】APP->我的->东东农场,完成可在记录里查看奖品\n';
@@ -399,7 +398,7 @@ var _0xodV='jsjiami.com.v7';const _0x482600=_0x38d7;(function(_0x56090f,_0x32c00
                 TodayCache.push(tempAddCache);
             }
             await getjdfruitinfo(); //老农场
-            await $.wait(1000);
+            await $.wait(500);
             await fruitnew();
             //await checkplus();
             await Promise.all([
@@ -743,7 +742,7 @@ async function showMsg() {
         ReturnMessage += `【特价金币】${$.JDtotalcash}币(≈${($.JDtotalcash / 10000).toFixed(2)}元)\n`;
     }
     if ($.ECardinfo)
-        ReturnMessage += `【礼品卡额】${$.ECardinfo}元\n`;
+        ReturnMessage += `【京东 E卡】${$.ECardinfo}元\n`;
 
     if ($.JoyRunningAmount)
         ReturnMessage += `【汪汪赛跑】${$.JoyRunningAmount}元\n`;
@@ -1212,45 +1211,7 @@ function TotalBean2() {
         });
     });
 }
-function wanyiwan() {
-    return new Promise(async (resolve) => {
-        const options = {
-            url: `http://api.m.jd.com/client.action`,
-            body: `functionId=wanyiwan_exchange_page&appid=signed_wh5&body={"version":1}&&networkType=wifi&client=ios&clientVersion=${$.UA.split(';')[2]}&t=${Date.now()}`,
-            headers: {
-                Cookie: cookie,
-                'content-type': `application/x-www-form-urlencoded`,
-                // 'Accept-Encoding': `gzip,compress,br,deflate`,
-                Origin: `https://pro.m.jd.com`,
-                Referer: `https://pro.m.jd.com/`,
-                'User-Agent': $.UA,
-            },
-            timeout: 30000
-        };
-        $.post(options, (err, resp, data) => {
-            try {
-                if (err) {
-                    $.logErr(err);
-                } else {
-                    if (data) {
-                        data = $.toObj(data);
-                        if (data.data.bizCode == 0) {
-                            $.wyw_score = data.data.result.score || 0;
-                        }
 
-                    } else {
-                        $.log('服务器返回空数据');
-                    }
-                }
-            } catch (e) {
-                $.logErr(e);
-            }
-            finally {
-                resolve();
-            }
-        });
-    });
-}
 
 function isLoginByX1a0He() {
     return new Promise((resolve) => {
@@ -2066,7 +2027,7 @@ function dwappinfo() {
                     if (data.code == 200) {
                         ccc = data.data.balanceNum;
                     } else {
-                        console.log(data.msg);
+                        //console.log(data.msg);
                     }
                 }
             } catch (e) {
@@ -2113,8 +2074,8 @@ function dwappexpire() {
 
 function getek() {
     let opt = {
-        url: `https://mygiftcard.jd.com/giftcard/queryChannelUserCard`,
-        //body: `appid=wh5&clientVersion=1.0.0&functionId=wanrentuan_superise_send&body={"channel":2}&area=2_2813_61130_0`,
+        url: `https://api.m.jd.com/api?functionId=queryChannelUserCard`,
+        body: `cthr=1&client=h5&clientVersion=&t=${Date.now()}&loginWQBiz=&appid=mygiftcard&functionId=queryChannelUserCard&body=null`,
         headers: {
             //'Host': 'api.m.jd.com',
             'Origin': 'https://o.jd.com',
@@ -2124,16 +2085,15 @@ function getek() {
         }
     }
     return new Promise(async (resolve) => {
-        $.get(opt, async (err, resp, data) => {
+        $.post(opt, async (err, resp, data) => {
             try {
                 if (err) {
-                    console.log(`getek请求失败!!!!`)
+                    console.log(`getek请求失败!!`)
                 } else {
                     data = JSON.parse(data)
-                    if (data.code == 000000) {
+                    if (data.code == '000000') {
                         $.ECardinfo = Number(data.data.totalAmount);
                     } else {
-                        console.log(data.msg)
                     }
                 }
             } catch (e) {
