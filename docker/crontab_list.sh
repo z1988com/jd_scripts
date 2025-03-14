@@ -35,8 +35,8 @@
 # 京豆变动通知
 20 10,21 * * * node /scripts/jd_bean_change.js >> /scripts/logs/jd_bean_change.log 2>&1
 
-# 京东快递签到
-47 1 * * * node /scripts/jd_kd.js >> /scripts/logs/jd_kd.log 2>&1
+# 京东快递签到 20250314 403
+#47 1 * * * node /scripts/jd_kd.js >> /scripts/logs/jd_kd.log 2>&1
 
 # 导到所有互助码
 # 23 7 * * * node /scripts/jd_get_share_code.js >> /scripts/logs/jd_get_share_code.log 2>&1
@@ -54,24 +54,24 @@
 
 #18 3,17 * * * node /scripts/jd_sign_activity.js >> /scripts/logs/jd_sign_activity.log 2>&1
 
-#MM领京豆 入口：首页-领京豆-升级赚京豆
-0 9,19 * * * node /scripts/gua_MMdou.js >> /scripts/logs/gua_MMdou.log 2>&1
+#MM领京豆 入口：首页-领京豆-升级赚京豆 20251314 风控了
+# 0 9,19 * * * node /scripts/gua_MMdou.js >> /scripts/logs/gua_MMdou.log 2>&1
 
 
 
-25 6,10,18 * * * node /scripts/jd_superBrandZII.js >> /scripts/logs/jd_superBrandZII.log 2>&1
+#25 6,10,18 * * * node /scripts/jd_superBrandZII.js >> /scripts/logs/jd_superBrandZII.log 2>&1
 
 #微信签到红包
 09 5 * * * node /scripts/jd_wxSignRed.js >> /scripts/logs/jd_wxSignRed.log 2>&1
 
-#天天来赚钱 天天来赚钱，入口：小程序-下面分割横幅 只做任务，无签到，待完善
-13 10,19 * * * node /scripts/jd_wxttzq.js >> /scripts/logs/jd_wxttzq.log 2>&1
+#天天来赚钱 天天来赚钱，入口：小程序-下面分割横幅 只做任务，无签到，待完善  20250314 火爆了
+#13 10,19 * * * node /scripts/jd_wxttzq.js >> /scripts/logs/jd_wxttzq.log 2>&1
 
-#特务之明星送好礼
-10 8,20 * * * node /scripts/jd_superBrandStar.js >> /scripts/logs/jd_superBrandStar.log 2>&1
+#特务之明星送好礼 20250314 403了
+#10 8,20 * * * node /scripts/jd_superBrandStar.js >> /scripts/logs/jd_superBrandStar.log 2>&1
 
-#特务之明星送好礼
-10 7,13,16,21 * * * node /scripts/jd_superBrandStar_.js >> /scripts/logs/jd_superBrandStar_.log 2>&1
+#特务之明星送好礼 20250314 获取活动详情失败
+#10 7,13,16,21 * * * node /scripts/jd_superBrandStar_.js >> /scripts/logs/jd_superBrandStar_.log 2>&1
 
 # 京享值任务领豆，每周一次
 #19 10 * * * node /scripts/jd_vipgrowth.js >> /scripts/logs/jd_vipgrowth.log 2>&1
@@ -84,7 +84,7 @@
 
 
 #京喜特价金币 已下架（2024-05-07）
-05 13,19 * * *  cd /scripts && node jd_speed_sign2.js >> /scripts/logs/jd_speed_sign2.log 2>&1
+#05 13,19 * * *  cd /scripts && node jd_speed_sign2.js >> /scripts/logs/jd_speed_sign2.log 2>&1
 
 #特价版签到提现新
 36 11,21 * * *  cd /scripts && node jd_tjqd_new.js >> /scripts/logs/jd_tjqd_new.log 2>&1
@@ -100,8 +100,8 @@
 
 
 
-#Jd京喜特价抽现金
-46 0,9 * * *  node /scripts/jx_cxjhelp.js >> /scripts/logs/jx_cxjhelp.log 2>&1
+#Jd京喜特价抽现金 20250314 失效了
+#46 0,9 * * *  node /scripts/jx_cxjhelp.js >> /scripts/logs/jx_cxjhelp.log 2>&1
 
 #Jd每日红包
 #23 6,16 * * *  node /scripts/jd_mrhb.js >> /scripts/logs/jd_mrhb.log 2>&1
@@ -191,8 +191,8 @@
 13 0,12 * * * node /scripts/jd_global_task_.js >> /scripts/logs/jd_global_task_.log 2>&1
 
 
-#天天领红包小程序版
-52 2,13 * * * node /scripts/jd_wechat_ttlzq.js >> /scripts/logs/jd_wechat_ttlzq.log 2>&1
+#天天领红包小程序版 20250314 下线了
+# 52 2,13 * * * node /scripts/jd_wechat_ttlzq.js >> /scripts/logs/jd_wechat_ttlzq.log 2>&1
 
  
 #轻松赚豆 403
@@ -205,8 +205,8 @@
 #赚汪贝兑超市卡
 32 9,21 * * * node /scripts/jd_mk_game.js >> /scripts/logs/jd_mk_game.log 2>&1
 
-#做任务赚汪贝
-10 11,19 * * * node /scripts/jd_zwb.js >> /scripts/logs/jd_zwb.log 2>&1
+#做任务赚汪贝 20250314 火爆
+#10 11,19 * * * node /scripts/jd_zwb.js >> /scripts/logs/jd_zwb.log 2>&1
 
 
 #一键价保
@@ -215,8 +215,8 @@
 #Jd转赚红包
 #5 0-23/2 * * * cd /scripts && node jd_zzhb.js >> /scripts/logs/jd_zzhb.log 2>&1
 
-#Jd转赚红包_抽奖提现
-55 7,17,21 * * *  cd /scripts && node jd_zzhb_draw.js >> /scripts/logs/jd_zzhb_draw.log 2>&1
+#Jd转赚红包_抽奖提现 20250314 403
+#55 7,17,21 * * *  cd /scripts && node jd_zzhb_draw.js >> /scripts/logs/jd_zzhb_draw.log 2>&1
 
 #Jd转赚红包2  2024-12-31太火爆了 💣
 #36 0-23/2 * * *  cd /scripts && node jd_zzhb_new.js >> /scripts/logs/jd_zzhb_new.log 2>&1
@@ -260,8 +260,8 @@
 #京喜 欢乐淘金（发财挖宝）
 01 3,13,21  * * *  node /scripts/jx_fcwb_auto.js >> /scripts/logs/jx_fcwb_auto.log 2>&1
 
-#服装抽奖
-36 5,19 * * *  node /scripts/jd_clothing_draw.js >> /scripts/logs/jd_clothing_draw.log 2>&1
+#服装抽奖 20250314 403了
+#36 5,19 * * *  node /scripts/jd_clothing_draw.js >> /scripts/logs/jd_clothing_draw.log 2>&1
 
 
 #618红包
@@ -304,7 +304,7 @@
 #21 1,19 * * *  cd /scripts && node jd_MktV50.js >> /scripts/logs/jd_MktV50.log 2>&1
 
 #玩一玩的摇一摇
-30 19 * * *  cd /scripts && node jd_yaoyao.js >> /scripts/logs/jd_yaoyao.log 2>&1
+#30 19 * * *  cd /scripts && node jd_yaoyao.js >> /scripts/logs/jd_yaoyao.log 2>&1
 
 #小范大人V你618
 #01 3,20 * * *  cd /scripts && node jd_fanV618.js >> /scripts/logs/jd_fanV618.log 2>&1
@@ -314,9 +314,18 @@
 
 
 
-#看视频赚现金-任务
-53 3,20 * * *  cd /scripts && node jd_video_task.js >> /scripts/logs/jd_video_task.log 2>&1
+#看视频赚现金-任务  20250314 风控了
+#53 3,20 * * *  cd /scripts && node jd_video_task.js >> /scripts/logs/jd_video_task.log 2>&1
 
+
+#ys每日签到-
+32 6,18 * * *  cd /scripts && node jd_yssign.js >> /scripts/logs/jd_yssign.log 2>&1
+
+#hs每日签到-
+20 7,19 * * *  cd /scripts && node jd_hssign.js >> /scripts/logs/jd_hssign.log 2>&1
+
+#打卡领豆-
+11 8,20 * * *  cd /scripts && node jd_daka_bean.js >> /scripts/logs/jd_daka_bean.log 2>&1
 
 
 ############## 值得买 ##############
@@ -343,11 +352,11 @@
 
 ############## 联通 ##############
 
-11 0,10,18 * * * node /scripts/chinaUnicom.js >> /scripts/logs/chinaUnicom.log 2>&1
+#11 0,10,18 * * * node /scripts/chinaUnicom.js >> /scripts/logs/chinaUnicom.log 2>&1
 
 #话费红包签到
-51 7,19 * * * node /scripts/unicom_day_sign.js >> /scripts/logs/unicom_day_sign.log 2>&1
+#51 7,19 * * * node /scripts/unicom_day_sign.js >> /scripts/logs/unicom_day_sign.log 2>&1
 
 ############## 云模板 ##############
 
-39 0,10,18 * * * node /scripts/22vd_sign.js >> /scripts/logs/22vd_sign.log 2>&1
+#39 0,10,18 * * * node /scripts/22vd_sign.js >> /scripts/logs/22vd_sign.log 2>&1
