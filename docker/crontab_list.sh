@@ -62,7 +62,7 @@
 #25 6,10,18 * * * node /scripts/jd_superBrandZII.js >> /scripts/logs/jd_superBrandZII.log 2>&1
 
 #微信签到红包
-09 5 * * * node /scripts/jd_wxSignRed.js >> /scripts/logs/jd_wxSignRed.log 2>&1
+#09 5 * * * node /scripts/jd_wxSignRed.js >> /scripts/logs/jd_wxSignRed.log 2>&1
 
 #天天来赚钱 天天来赚钱，入口：小程序-下面分割横幅 只做任务，无签到，待完善  20250314 火爆了
 #13 10,19 * * * node /scripts/jd_wxttzq.js >> /scripts/logs/jd_wxttzq.log 2>&1
@@ -188,7 +188,7 @@
 #6 2,12 * * * node /scripts/jd_xchb_help.js >> /scripts/logs/jd_xchb_help.log 2>&1
 
 #京豆国际  {"code":"25","msg":"监测到您的账号存在一定风险，请稍后重试"}
-13 0,12 * * * node /scripts/jd_global_task_.js >> /scripts/logs/jd_global_task_.log 2>&1
+#13 0,12 * * * node /scripts/jd_global_task_.js >> /scripts/logs/jd_global_task_.log 2>&1
 
 
 #天天领红包小程序版 20250314 下线了
