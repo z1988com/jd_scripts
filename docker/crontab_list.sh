@@ -87,7 +87,7 @@
 #05 13,19 * * *  cd /scripts && node jd_speed_sign2.js >> /scripts/logs/jd_speed_sign2.log 2>&1
 
 #特价版签到提现新
-36 11,21 * * *  cd /scripts && node jd_tjqd_new.js >> /scripts/logs/jd_tjqd_new.log 2>&1
+#36 11,21 * * *  cd /scripts && node jd_tjqd_new.js >> /scripts/logs/jd_tjqd_new.log 2>&1
 
 
 #极速模式签到 失效
