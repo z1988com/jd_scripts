@@ -24,7 +24,7 @@
 20 7,16 * * * node /scripts/jd_joypark_task.js >> /scripts/logs/jd_joypark_task.log 2>&1
 
 #牛牛乐园任务每日任务
-10 9,19 * * * node /scripts/jx_joypark_task.js >> /scripts/logs/jx_joypark_task.log 2>&1
+#10 9,19 * * * node /scripts/jx_joypark_task.js >> /scripts/logs/jx_joypark_task.log 2>&1
 
 # 京东种豆得豆
 01 7-22/6 * * * node /scripts/jd_plantBean.js >> /scripts/logs/jd_plantBean.log 2>&1
@@ -223,7 +223,7 @@
 
 
 #Jd转赚红包2_抽奖提现
-55 9,15,19 * * *  cd /scripts && node jd_zzhb_draw_new.js >> /scripts/logs/jd_zzhb_draw_new.log 2>&1
+#55 9,15,19 * * *  cd /scripts && node jd_zzhb_draw_new.js >> /scripts/logs/jd_zzhb_draw_new.log 2>&1
 
 
 #Jd邀好友抽大奖_助力
@@ -258,7 +258,7 @@
 #京喜 欢乐淘金（发财挖宝）助力  入口：京东APP——玩一玩——欢乐淘金
 #05 2,11,19  * * *  node /scripts/jx_fcwb_help.js >> /scripts/logs/jx_fcwb_help.log 2>&1
 #京喜 欢乐淘金（发财挖宝）
-01 3,13,21  * * *  node /scripts/jx_fcwb_auto.js >> /scripts/logs/jx_fcwb_auto.log 2>&1
+#01 3,13,21  * * *  node /scripts/jx_fcwb_auto.js >> /scripts/logs/jx_fcwb_auto.log 2>&1
 
 #服装抽奖 20250314 403了
 #36 5,19 * * *  node /scripts/jd_clothing_draw.js >> /scripts/logs/jd_clothing_draw.log 2>&1
