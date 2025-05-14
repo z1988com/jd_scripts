@@ -6,7 +6,7 @@ export CODE258="xxxxxxx"
 export RedCount="5"
 每个账号之间延时单位毫秒
 export RedTimes="5000"
-代理api
+代理api 
 export DY_PROXY='url'
 cron: 0 0,20 * * *
 */
