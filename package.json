@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/z1988com/jd_scripts.git"
   },
   "keywords": [
-    " "
+    "京东薅羊毛工具, 京东水果、宠物、种豆等等"
   ],
-  "author": "",
+  "author": "z1988com",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
