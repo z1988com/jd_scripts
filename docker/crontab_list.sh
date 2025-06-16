@@ -328,6 +328,9 @@
 11 8,20 * * *  cd /scripts && node jd_daka_bean.js >> /scripts/logs/jd_daka_bean.log 2>&1
 
 
+#每日浏览5豆
+35 9,21 * * *  cd /scripts && node jd_fdshkj.js >> /scripts/logs/jd_fdshkj.log 2>&1
+
 ############## 值得买 ##############
 
 #签到
