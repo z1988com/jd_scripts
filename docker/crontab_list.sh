@@ -329,7 +329,7 @@
 
 
 #每日浏览5豆
-35 9,21 * * *  cd /scripts && node jd_fdshkj.js >> /scripts/logs/jd_fdshkj.log 2>&1
+#35 9,21 * * *  cd /scripts && node jd_fdshkj.js >> /scripts/logs/jd_fdshkj.log 2>&1
 
 ############## 值得买 ##############
 
