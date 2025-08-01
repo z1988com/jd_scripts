@@ -94,8 +94,8 @@
 #08 12,17 * * *  node /scripts/jd_speedtx.js >> /scripts/logs/jd_speedtx.log 2>&1
 
 
-#摇钱树任务 等级达到40级为满级，需要停止浇水3天，7天后开启新一轮活动
-38 10,19 * * *  node /scripts/jd_yqs.js >> /scripts/logs/jd_yqs.log 2>&1
+#摇钱树任务 等级达到40级为满级，需要停止浇水3天，7天后开启新一轮活动  20250801 获取活动失败,
+###38 10,19 * * *  node /scripts/jd_yqs.js >> /scripts/logs/jd_yqs.log 2>&1
 
 
 
@@ -123,8 +123,8 @@
 #东东农场助力
 #02 6,16 * * *  node /scripts/jd_farm_help.js >> /scripts/logs/jd_farm_help.log 2>&1
 
-#新东东农场助力
-02 11,15,20 * * *  node /scripts/jd_farm_help_new.js >> /scripts/logs/jd_farm_help_new.log 2>&1
+#新东东农场助力 20250801活动太火爆了， 请稍后再试~
+###02 11,15,20 * * *  node /scripts/jd_farm_help_new.js >> /scripts/logs/jd_farm_help_new.log 2>&1
 
 
 #双十一红包
@@ -318,14 +318,14 @@
 #53 3,20 * * *  cd /scripts && node jd_video_task.js >> /scripts/logs/jd_video_task.log 2>&1
 
 
-#ys每日签到-
-32 6,18 * * *  cd /scripts && node jd_yssign.js >> /scripts/logs/jd_yssign.log 2>&1
+#ys每日签到- 20250801 s活动太火爆啦，请您稍后再来试试
+##32 6,18 * * *  cd /scripts && node jd_yssign.js >> /scripts/logs/jd_yssign.log 2>&1
 
-#hs每日签到-
-20 7,19 * * *  cd /scripts && node jd_hssign.js >> /scripts/logs/jd_hssign.log 2>&1
+#hs每日签到-  20250801 活动太火爆啦，请您稍后再来试试
+###20 7,19 * * *  cd /scripts && node jd_hssign.js >> /scripts/logs/jd_hssign.log 2>&1
 
-#打卡领豆-
-11 8,20 * * *  cd /scripts && node jd_daka_bean.js >> /scripts/logs/jd_daka_bean.log 2>&1
+#打卡领豆-  活动太火爆啦，请稍后重试哦~20250801
+##11 8,20 * * *  cd /scripts && node jd_daka_bean.js >> /scripts/logs/jd_daka_bean.log 2>&1
 
 
 #每日浏览5豆
