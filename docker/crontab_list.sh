@@ -19,9 +19,9 @@
 
 # 东东农场内部水滴互助
 #26 5,17 * * *  node /scripts/jd_fruit_help.js >> /scripts/logs/jd_fruit_help.log 2>&1
-
-#汪汪乐园每日任务
-20 7,16 * * * node /scripts/jd_joypark_task.js >> /scripts/logs/jd_joypark_task.log 2>&1
+ 
+#汪汪乐园每日任务 20250807 暂停一段时间避免403
+#20 7,16 * * * node /scripts/jd_joypark_task.js >> /scripts/logs/jd_joypark_task.log 2>&1
 
 #牛牛乐园任务每日任务
 #10 9,19 * * * node /scripts/jx_joypark_task.js >> /scripts/logs/jx_joypark_task.log 2>&1
@@ -115,6 +115,10 @@
 
 #新农场任务 2
 18 7,19 * * *  node /scripts/jd_fruit_new.js >> /scripts/logs/jd_fruit_new.log 2>&1
+
+
+#新农场任务 2
+2 2,16 * * *  node /scripts/jd_farmnew_ck_help.js >> /scripts/logs/jd_farmnew_ck_help.log 2>&1
 
 #农场小程序助力
 #51 9,19 * * *  node /scripts/jd_farmshare.js >> /scripts/logs/jd_farmshare.log 2>&1
@@ -245,8 +249,8 @@
 # APP首页-领京豆 金融双签领取
 #52 9,21 * * *  node /scripts/jd_signbeanact.js >> /scripts/logs/jd_signbeanact.log 2>&1
 
-#金融签到，领取双签礼包
-53 6,18  * * *  node /scripts/jd_jrsign.js >> /scripts/logs/jd_jrsign.log 2>&1
+#金融签到，领取双签礼包 20250807签到失败
+##53 6,18  * * *  node /scripts/jd_jrsign.js >> /scripts/logs/jd_jrsign.log 2>&1
 
 
 #欢乐淘金（发财挖宝）助力  入口：京东APP——玩一玩——欢乐淘金
