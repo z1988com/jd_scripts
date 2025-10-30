@@ -114,7 +114,7 @@
 #12 8,18 * * *  node /scripts/jd_dlgf.js >> /scripts/logs/jd_dlgf.log 2>&1
 
 #新农场任务 2
-18 7,19 * * *  node /scripts/jd_fruit_new.js >> /scripts/logs/jd_fruit_new.log 2>&1
+18 7,16 * * *  node /scripts/jd_fruit_new.js >> /scripts/logs/jd_fruit_new.log 2>&1
 
 
 #新农场任务 2
