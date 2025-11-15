@@ -35,6 +35,7 @@ class SmzdmCheckinBot extends SmzdmBot {
     const { isSuccess, data, response } = await requestApi('https://user-api.smzdm.com/checkin', {
       method: 'post',
       headers: this.getHeaders(),
+	  debug: true,
       data: {
         touchstone_event: '',
         sk: this.sk || '1',
