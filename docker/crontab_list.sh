@@ -118,7 +118,7 @@
 
 
 #新农场任务 2
-2 2,16 * * *  node /scripts/jd_farmnew_ck_help.js >> /scripts/logs/jd_farmnew_ck_help.log 2>&1
+2 8,16 * * *  node /scripts/jd_farmnew_ck_help.js >> /scripts/logs/jd_farmnew_ck_help.log 2>&1
 
 #农场小程序助力
 #51 9,19 * * *  node /scripts/jd_farmshare.js >> /scripts/logs/jd_farmshare.log 2>&1
