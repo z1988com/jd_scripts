@@ -67,6 +67,7 @@ async function login(_0x36d807, _0x136ec8) {
     "deviceNo": "",
     "account": _0x36d807
   });
+  console.log(_0x1269ca)
   return _0x1269ca.code === 0 ? _0x1269ca.data.token : null;
 }
 async function getUserInfo(_0xa52aaf) {
