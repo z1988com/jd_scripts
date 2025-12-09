@@ -72,6 +72,7 @@ async function login(_0x36d807, _0x136ec8) {
 }
 async function getUserInfo(_0xa52aaf) {
   const _0x3d5205 = await request("http://wuliucps.com/ht/web/login/info", "GET", null, _0xa52aaf);
+  console.log(_0x3d5205);
   return _0x3d5205.code === 0 ? _0x3d5205.data : null;
 }
 async function getTaskList(_0xa552c) {
