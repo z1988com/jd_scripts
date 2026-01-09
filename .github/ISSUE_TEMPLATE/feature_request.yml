@@ -1,0 +1,9 @@
+name: "💡功能建议"
+description: 为项目提想法
+labels: ["pending","feature"]
+body:
+  - type: textarea
+    id: require
+    attributes:
+      label: 需求描述
+      placeholder: 请描述

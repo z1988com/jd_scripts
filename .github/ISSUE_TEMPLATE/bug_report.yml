@@ -1,0 +1,18 @@
+name: 问题反馈 🐞 
+description: 有问题先更新订阅，不行才提
+body:
+  - type: input
+    id: version
+    attributes:
+      label: 青龙版本
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 尽量详细描述问题，附上错误日志或截图。
+      placeholder: 请描述
+    validations:
+      required: true
