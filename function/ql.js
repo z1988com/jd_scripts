@@ -8,7 +8,7 @@ const fs = require('fs');
 const tokenFileList = ['/ql/data/db/keyv.sqlite', '/ql/data/config/auth.json', '/ql/config/auth.json'];
 let authFile = getLatestFile(tokenFileList);
 const api = got.extend({
-    prefixUrl: 'http://127.0.0.1:5600',
+    prefixUrl: 'http://127.0.0.1:5700',
     retry: { limit: 0 },
 });
 function getLatestFile(files) {
