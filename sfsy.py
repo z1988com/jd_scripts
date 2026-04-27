@@ -1118,11 +1118,13 @@ def main():
     env_value = os.getenv(config.ENV_NAME)
     if not env_value:
         print(f"❌ 未找到环境变量 {config.ENV_NAME}，请检查配置")
+        send('顺丰速运日常任务', '❌未添加sfsyUrl变量')
         return
 
     account_urls = [url.strip() for url in env_value.split('&') if url.strip()]
     if not account_urls:
         print(f"❌ 环境变量 {config.ENV_NAME} 为空或格式错误")
+        send('顺丰速运日常任务', '❌sfsyUrl变量为空或格式错误')
         return
 
     # 随机打乱账号顺序
@@ -1185,6 +1187,8 @@ def main():
     print(f"{'序号':<6} {'手机号':<15} {'今日获得积分':<15} {'总积分':<15} {'状态':<10}")
     print("-" * 80)
     
+    msg = ""
+    
     for result in all_results:
         index = result['index'] + 1
         phone = result['phone'][:3] + "****" + result['phone'][7:] if result['phone'] else "未登录"
@@ -1192,11 +1196,22 @@ def main():
         total = result['points_after']
         status = "✅成功" if result['success'] else "❌失败"
         
+        msg +=  "🙍🏻‍♂️ 第{index}个账号"
+        msg +=  "{phone}"
+        msg +=  "今日获得积分{earned}"
+        msg +=  "总积分{total}"
+        msg +=  "状态{status}"
+   
         print(f"{index:<6} {phone:<15} {earned:<15} {total:<15} {status:<10}")
     
     print("-" * 80)
     print(f"{'汇总':<6} {'账号总数: ' + str(len(all_results)):<15} {'今日总获得: ' + str(total_earned):<15} {'':<15} {'成功: ' + str(success_count):<10}")
     print("=" * 80)
+    
+    try:
+        send('顺丰速运日常任务', msg)
+    except Exception as err:
+        print('%s\n❌ 错误，请查看运行日志！' % err)
     
     print("\n🎊 所有账号任务执行完成!")
 
