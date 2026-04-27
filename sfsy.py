@@ -1114,8 +1114,7 @@ def run_single_account(account_info: str, index: int, config: Config) -> Dict[st
 def main():
     """主函数"""
     config = Config()
-    send('顺丰速运日常任务', '❌未添加sfsyUrl变量')
-    return
+
     
     env_value = os.getenv(config.ENV_NAME)
     if not env_value:
