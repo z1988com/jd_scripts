@@ -3,10 +3,12 @@
 2 20 14 12 * other_notify_test.js
  */
 
-const $ = new Env('京豆详情统计');
+const $ = new Env('通知测试');
 const notify = $.isNode() ? require('./sendNotify') : '';
-$.msg($.name, '', '请勿随意在BoxJs输入框修改内容\n建议通过脚本去获取cookie')
+const allMessage='测试的内容'
+$.msg($.name, '',  `${allMessage}`)
 
+await notify.sendNotify(`${$.name}`, `${allMessage}`)
 
 // prettier-ignore
 function Env(t, e) {
