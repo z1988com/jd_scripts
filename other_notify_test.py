@@ -62,7 +62,6 @@ from urllib.parse import unquote
 import requests
 
 
-
 # 发送通知
 def load_send():
     cur_path = path.abspath(path.dirname(__file__))
